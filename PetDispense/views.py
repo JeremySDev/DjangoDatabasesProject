@@ -9,5 +9,5 @@ def index(request):
     return render_to_response('PetDispense/index.html')
 
 
-def base(request):
-    return render_to_response('PetDispense/base.html')
+def selection(request):
+    return render_to_response('PetDispense/selection.html')

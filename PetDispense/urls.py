@@ -6,5 +6,5 @@ from django.views.generic import DetailView, ListView
 urlpatterns = patterns('',
     #url(r'^index/$', 'PetDispense.views.index', name=u"home"),
     url(r'^$',  'PetDispense.views.index', name=u"home"),
-    url(r'^$',  'PetDispense.views.base', name=u"base"),
+    url(r'^$',  'PetDispense.views.selection', name=u"selection"),
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
