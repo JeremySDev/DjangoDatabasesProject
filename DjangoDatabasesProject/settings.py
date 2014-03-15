@@ -64,18 +64,22 @@ STATIC_ROOT = 'static/'
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 # URL prefix for admin static files -- CSS, JavaScript and images.
 # Make sure to use a trailing slash.
 # Examples: "http://foo.com/static/admin/", "/static/admin/".
 ADMIN_MEDIA_PREFIX = '/static/admin/'
-
+import os, os.path
 # Additional locations of static files
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    os.path.join(
+        os.path.dirname(__file__),
+        'static',
+    ),
 
 )
 
@@ -107,9 +111,9 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'DjangoDatabasesProject.urls'
 
-import os
+
 TEMPLATE_DIRS = (
-    '/home/vagrant/Dropbox/453_Databases/DjangoDatabasesProject/templates/',
+    '/home/vagrant/MyHome/Dropbox/453_Databases/DjangoDatabasesProject/templates/',
 )
 
 INSTALLED_APPS = (

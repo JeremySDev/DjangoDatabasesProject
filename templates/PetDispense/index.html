@@ -1,3 +1,4 @@
+{% extends "base.html" %}
 {% load staticfiles %}
 {% block content %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -7,11 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Pet Dispense - Admin Login</title>
 <meta name="viewport" content="width=device-width,initial-scale=1" />
- 
-<!-- StyleSheet -->
-<link rel="stylesheet" href="{% block stylesheet_rtl %}{{ STATIC_URL }}static/css/bootstrap.css{% endblock %}" />
-<link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap-responsive.css" />
-<link rel="stylesheet" href="{{ STATIC_URL }}css/Login.css" />
+<link rel="stylesheet" href="{% block stylesheet_rtl3 %}static/css/Login.css{% endblock %}" />
 <style type="text/css">
       .container {
         width: 400px;
@@ -121,12 +118,7 @@
 <a href="#" class="btn" data-dismiss="modal">Close</a>
 </div>
 </div>
- 
-<!-- JavaScript -->
-{% block js %}
-<script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap.js" ></script>
-<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-latest.js" ></script>
-{% endblock %}
+
 </body>
 </html>
 {% endblock %}

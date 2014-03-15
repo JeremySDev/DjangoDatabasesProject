@@ -7,3 +7,7 @@ from PetDispense.models import AnimalInfo
 
 def index(request):
     return render_to_response('PetDispense/index.html')
+
+
+def base(request):
+    return render_to_response('PetDispense/base.html')
