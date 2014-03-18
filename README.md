@@ -18,7 +18,7 @@ This Project is licensed under the GNU General Public License http://www.gnu.org
 <li>PetDispense - contains static css, js, etc.assets used by the app itself.</li>
 
 <li>Templates folder - contains all the html for all projects and is spilt for individual sites</li>
-<li>PetDispense - cans html files for the PetDispense app. </li>
+<li>PetDispense - contains html files for the PetDispense app. </li>
     <ul>
     <li>about.html</li>
     <li>agreement.html</li>
