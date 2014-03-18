@@ -20,17 +20,16 @@ This Project is licensed under the GNU General Public License http://www.gnu.org
 <li>Templates folder - contains all the html for all projects and is spilt for individual sites</li>
 <li>PetDispense - contains html files for the PetDispense app. </li>
     <ul>
-    <li>about.html</li>
-    <li>agreement.html</li>
-    <li>confirm.html</li>
-    <li>contact.html</li>
-    <li>index.html</li>
-    <li>pin.html</li>
-    <li>returns.html</li>
-    <li>selection.html</li>
+    <li>about.html     - give a brief over view of the project</li>
+    <li>agreement.html - </li>
+    <li>confirm.html   - </li>
+    <li>contact.html   - </li>
+    <li>index.html     - login screen and entry point in to the program</li>
+    <li>pin.html       - </li>
+    <li>returns.html   - </li>
+    <li>selection.html - </li>
     </ul>
 <li>admin - contain html used by the admin site</li>
 <li>base.html - no html in this file it is just used by other html files to determine what css and js to get.</li>
 </ul>
-<p>DjangoDatabasesProject folder - contains all python files that apply to the entire site
-                                i.e. settings.py</p>
+<p>DjangoDatabasesProject folder - contains all python files that apply to the entire site ai.e. settings.py</p>

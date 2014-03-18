@@ -111,6 +111,10 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'DjangoDatabasesProject.urls'
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.request',
+    'django.contrib.auth.context_processors.auth',
+)
 
 TEMPLATE_DIRS = (
     '/home/vagrant/MyHome/Dropbox/453_Databases/DjangoDatabasesProject/templates/',
@@ -128,6 +132,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'PetDispense',
+    'django_tables2',
 )
 
 # A sample logging configuration. The only tangible logging

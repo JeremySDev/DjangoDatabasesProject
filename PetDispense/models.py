@@ -1,6 +1,6 @@
 from django.db import models
 import datetime
-import dateutil
+#import dateutil
 
 
 class Species(models.Model):
@@ -31,7 +31,8 @@ class AnimalInfo(models.Model):
 
     @property
     def __unicode__(self):
-        return self.animal_id#, self.animal_name, self.species, self.breed, self.in_shelter
+        return self.animal_id  #, self.animal_name, self.species, self.breed, self.in_shelter
+
 
 class Owners(models.Model):
     owner_id = models.IntegerField(primary_key=True)
