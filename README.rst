@@ -6,33 +6,33 @@ Western Carolina University. It and any modification of it are not to be used in
 This Project is licensed under the GNU General Public License http://www.gnu.org/licenses/gpl-2.0.html
 
 PetDispense Folder - is for all python files related to the pet dispense
------------------
+------------------------------------------------------------------------
 
-- admin.py - is were models are registered for interaction on the admin site</li>
-- models.py - determines tables and relations for the PetDispense app.</li>
-- urls.py - determines what urls will display what html.</li>
-- views.py - creates classes that display html.</li>
-- test.py - not used right now</li>
+- admin.py - is were models are registered for interaction on the admin site
+- models.py - determines tables and relations for the PetDispense app.
+- urls.py - determines what urls will display what html.
+- views.py - creates classes that display html.
+- test.py - not used right now
 
+Static Folder - is for static asset such as css, js, etc.
+---------------------------------------------------------
 
-<p>Static Folder - is for static asset such as css, js, etc.</p>
--
-- PetDispense - contains static css, js, etc.assets used by the app itself.</li>
+- PetDispense - contains static css, js, etc.assets used by the app itself.
 
-- Templates folder - contains all the html for all projects and is spilt for individual sites</li>
-- PetDispense - contains html files for the PetDispense app. </li>
-    -
-    - about.html     - give a brief over view of the project</li>
-    - agreement.html - </li>
-    - confirm.html   - </li>
-    - contact.html   - </li>
-    - index.html     - login screen and entry point in to the program</li>
-    - pin.html       - </li>
-    - returns.html   - </li>
-    - selection.html - </li>
-    
-- admin - contain html used by the admin site</li>
-- base.html - no html in this file it is just used by other html files to determine what css and js to get.</li>
+Templates folder - contains all the html for all projects and is spilt for individual sites
+-------------------------------------------------------------------------------------------
+
+- PetDispense - contains html files for the PetDispense app.
+    - about.html     - give a brief over view of the project
+    - agreement.html - 
+    - confirm.html   - 
+    - contact.html   - 
+    - index.html     - login screen and entry point in to the program
+    - pin.html       - 
+    - returns.html   - 
+    - selection.html -
+- admin - contain html used by the admin site
+- base.html - no html in this file it is just used by other html files to determine what css and js to get.
 
 DjangoDatabasesProject folder - contains all python files that apply to the entire site ai.e. settings.py
------------------
+---------------------------------------------------------------------------------------------------------
