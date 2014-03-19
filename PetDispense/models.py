@@ -30,6 +30,14 @@ class AnimalInfo(models.Model):
     #    return u'%s' % dateutil.relativedelta(TODAY, self.birth_date).years
 
     @property
+    def species_name(self):
+        return u"%s" % self.species.species_name
+
+    @property
+    def breed_name(self):
+        return u"%s" % self.breed.breed_name
+
+    @property
     def __unicode__(self):
         return self.animal_id  #, self.animal_name, self.species, self.breed, self.in_shelter
 

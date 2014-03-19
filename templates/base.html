@@ -1,8 +1,10 @@
 {% load staticfiles %}
 <html>
 <head>
-    <link rel="stylesheet" href="{% block stylesheet_rtl1 %}/static/css/bootstrap.css{% endblock %}"/>
-    <link rel="stylesheet" href="{% block stylesheet_rtl2 %}/static/css/bootstrap-responsive.css{% endblock %}"/>
+{% block stylesheet_rtl %}
+    <link rel="stylesheet" href="/static/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/static/css/bootstrap-responsive.css"/>
+{% endblock %}
 </head>
 
 <body>
