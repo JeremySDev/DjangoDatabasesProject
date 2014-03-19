@@ -6,7 +6,6 @@ This Project is licensed under the GNU General Public License http://www.gnu.org
 
 PetDispense Folder - is for all python files related to the pet dispense
 ------------------------------------------------------------------------
-
 - admin.py - is were models are registered for interaction on the admin site
 - models.py - determines tables and relations for the PetDispense app.
 - urls.py - determines what urls will display what html.
@@ -19,7 +18,7 @@ Static Folder - is for static asset such as css, js, etc.
 - PetDispense - contains static css, js, etc.assets used by the app itself.
 
 Templates folder - contains all the html for all projects and is spilt for individual sites
--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 - PetDispense - contains html files for the PetDispense app.
     - about.html     - give a brief over view of the project
