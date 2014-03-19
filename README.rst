@@ -1,4 +1,3 @@
-.. image:: https://www.codeship.io/projects/868d9e90-9135-0131-f1e0-420dace8bbe5/status
 DjangoDatabasesProject
 ======================
 This software is only to be used as a course project in the Spring 2014 offering of CS453 <br> at

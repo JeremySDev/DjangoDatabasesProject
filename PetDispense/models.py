@@ -23,7 +23,6 @@ class AnimalInfo(models.Model):
     breed = models.ForeignKey(Breeds)
     #birth_date = models.DateField('birth date')
     in_shelter = models.BooleanField(default=True, blank=False, null=False)
-
     #@property
     #def age(self):
     #    TODAY = datetime.date.today()

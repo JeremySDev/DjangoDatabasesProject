@@ -1,11 +1,11 @@
 # Django settings for DjangoDatabasesProject project.
 import os
 import os.path
-import dj_database_url
+#import dj_database_url
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-DATABASE_URL
+#DATABASE_URL
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
@@ -15,7 +15,7 @@ ADMINS = (
 )
 
 MANAGERS = ADMINS
-DATABASES['default'] = dj_database_url.config()
+#DATABASES['default'] = dj_database_url.config()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
