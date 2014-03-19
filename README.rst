@@ -35,3 +35,7 @@ Templates folder - contains all the html for all projects and is spilt for indiv
 
 DjangoDatabasesProject folder - contains all python files that apply to the entire site ai.e. settings.py
 ---------------------------------------------------------------------------------------------------------
+
+- Procfile - lists the process types in PetDispense
+
+- .env - tells foreman the envs of the application
