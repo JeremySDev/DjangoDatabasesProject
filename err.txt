@@ -1,0 +1,79 @@
+16:52:43 web.1  | started with pid 3748
+16:52:43 web.1  | 2014-03-19 16:52:43 [3751] [INFO] Starting gunicorn 18.0
+16:52:43 web.1  | 2014-03-19 16:52:43 [3751] [INFO] Listening at: http://0.0.0.0:5000 (3751)
+16:52:43 web.1  | 2014-03-19 16:52:43 [3751] [INFO] Using worker: sync
+16:52:43 web.1  | 2014-03-19 16:52:43 [3756] [INFO] Booting worker with pid: 3756
+16:52:43 web.1  | 2014-03-19 16:52:43 [3756] [ERROR] Exception in worker process:
+16:52:43 web.1  | Traceback (most recent call last):
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 495, in spawn_worker
+16:52:43 web.1  |     worker.init_process()
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 106, in init_process
+16:52:43 web.1  |     self.wsgi = self.app.wsgi()
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 114, in wsgi
+16:52:43 web.1  |     self.callable = self.load()
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 62, in load
+16:52:43 web.1  |     return self.load_wsgiapp()
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 49, in load_wsgiapp
+16:52:43 web.1  |     return util.import_app(self.app_uri)
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/gunicorn/util.py", line 354, in import_app
+16:52:43 web.1  |     __import__(module)
+16:52:43 web.1  |   File "/home/vagrant/MyHome/Dropbox/453_Databases/DjangoDatabasesProject/DjangoDatabasesProject/wsgi.py", line 14, in <module>
+16:52:43 web.1  |     from dj_static import Cling
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/dj_static.py", line 8, in <module>
+16:52:43 web.1  |     from django.contrib.staticfiles.handlers import StaticFilesHandler as DebugHandler
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/django/contrib/staticfiles/handlers.py", line 8, in <module>
+16:52:43 web.1  |     from django.contrib.staticfiles.views import serve
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/django/contrib/staticfiles/views.py", line 13, in <module>
+16:52:43 web.1  |     from django.views import static
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/django/views/static.py", line 96, in <module>
+16:52:43 web.1  |     template_translatable = ugettext_noop("Index of %(directory)s")
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/django/utils/translation/__init__.py", line 65, in gettext_noop
+16:52:43 web.1  |     return _trans.gettext_noop(message)
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/django/utils/translation/__init__.py", line 52, in __getattr__
+16:52:43 web.1  |     if settings.USE_I18N:
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/django/conf/__init__.py", line 54, in __getattr__
+16:52:43 web.1  |     self._setup(name)
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/django/conf/__init__.py", line 49, in _setup
+16:52:43 web.1  |     self._wrapped = Settings(settings_module)
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/django/conf/__init__.py", line 132, in __init__
+16:52:43 web.1  |     % (self.SETTINGS_MODULE, e)
+16:52:43 web.1  | ImportError: Could not import settings 'DjangoDatabaseProject.settings' (Is it on sys.path? Is there an import error in the settings file?): No module named DjangoDatabaseProject.settings
+16:52:43 web.1  | Traceback (most recent call last):
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 495, in spawn_worker
+16:52:43 web.1  |     worker.init_process()
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 106, in init_process
+16:52:43 web.1  |     self.wsgi = self.app.wsgi()
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 114, in wsgi
+16:52:43 web.1  |     self.callable = self.load()
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 62, in load
+16:52:43 web.1  |     return self.load_wsgiapp()
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 49, in load_wsgiapp
+16:52:43 web.1  |     return util.import_app(self.app_uri)
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/gunicorn/util.py", line 354, in import_app
+16:52:43 web.1  |     __import__(module)
+16:52:43 web.1  |   File "/home/vagrant/MyHome/Dropbox/453_Databases/DjangoDatabasesProject/DjangoDatabasesProject/wsgi.py", line 14, in <module>
+16:52:43 web.1  |     from dj_static import Cling
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/dj_static.py", line 8, in <module>
+16:52:43 web.1  |     from django.contrib.staticfiles.handlers import StaticFilesHandler as DebugHandler
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/django/contrib/staticfiles/handlers.py", line 8, in <module>
+16:52:43 web.1  |     from django.contrib.staticfiles.views import serve
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/django/contrib/staticfiles/views.py", line 13, in <module>
+16:52:43 web.1  |     from django.views import static
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/django/views/static.py", line 96, in <module>
+16:52:43 web.1  |     template_translatable = ugettext_noop("Index of %(directory)s")
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/django/utils/translation/__init__.py", line 65, in gettext_noop
+16:52:43 web.1  |     return _trans.gettext_noop(message)
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/django/utils/translation/__init__.py", line 52, in __getattr__
+16:52:43 web.1  |     if settings.USE_I18N:
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/django/conf/__init__.py", line 54, in __getattr__
+16:52:43 web.1  |     self._setup(name)
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/django/conf/__init__.py", line 49, in _setup
+16:52:43 web.1  |     self._wrapped = Settings(settings_module)
+16:52:43 web.1  |   File "/home/vagrant/Envs/env1/local/lib/python2.7/site-packages/django/conf/__init__.py", line 132, in __init__
+16:52:43 web.1  |     % (self.SETTINGS_MODULE, e)
+16:52:43 web.1  | ImportError: Could not import settings 'DjangoDatabaseProject.settings' (Is it on sys.path? Is there an import error in the settings file?): No module named DjangoDatabaseProject.settings
+16:52:43 web.1  | 2014-03-19 16:52:43 [3756] [INFO] Worker exiting (pid: 3756)
+16:52:43 web.1  | 2014-03-19 16:52:43 [3751] [INFO] Shutting down: Master
+16:52:43 web.1  | 2014-03-19 16:52:43 [3751] [INFO] Reason: Worker failed to boot.
+16:52:43 web.1  | exited with code 3
+16:52:43 system | sending SIGTERM to all processes

@@ -14,6 +14,7 @@ class AnimalInfoTable(tables.Table):
     animal_name = tables.Column(verbose_name="animal name")
     species_name = tables.Column(verbose_name="species name")
     breed_name = tables.Column(verbose_name="breed name")
+
     class Meta:
         model = AnimalInfo
         sequence = ("animal_id", "animal_name", "species_name", "breed_name", "in_shelter")
