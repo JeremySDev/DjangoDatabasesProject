@@ -9,7 +9,7 @@ urlpatterns = patterns('',
                        url(r'^$', 'PetDispense.urls'),
                        url(r'^', include('PetDispense.urls')),
                        #url(r'^$', include('PetDispense.urls')),
-                       url(r'^PetDispense/', include('PetDispense.urls')),
+                       #url(r'^PetDispense/', include('PetDispense.urls')),
                        # Uncomment the admin/doc line below to enable admin documentation:
                        url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
