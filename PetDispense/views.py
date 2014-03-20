@@ -17,6 +17,10 @@ def selection(request):
     return render_to_response('PetDispense/selection.html')
 
 
+def contact(request):
+    return render_to_response('PetDispense/selection.html')
+
+
 def about(request):
     return render_to_response('PetDispense/about.html')
 
