@@ -6,7 +6,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-                       url(r'^petdispense.herokuapp.com/$', 'PetDispense.views.index', name=u"home"),
+                       url(r'^http://petdispense.herokuapp.com/$', 'PetDispense.views.index', name=u"home"),
                        url(r'^PetDispense/', include('PetDispense.urls')),
 
                        # Uncomment the admin/doc line below to enable admin documentation:
