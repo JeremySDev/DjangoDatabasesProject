@@ -17,18 +17,18 @@ Static Folder - is for static asset such as css, js, etc.
 
 - PetDispense - contains static css, js, etc.assets used by the app itself.
 
-Templates folder - contains all the html for all projects and is spilt for individual sites
---------------------------------------------------------------------------------
-
+Templates folder
+----------------
+- contains all the html for all projects and is spilt for individual sites
 - PetDispense - contains html files for the PetDispense app.
     - about.html     - give a brief over view of the project
-    - agreement.html - 
-    - confirm.html   - 
-    - contact.html   - 
+    - agreement.html - ask if the user if they agree with the
+    - confirm.html   -
+    - contact.html   - a contact page to get in touch with app devs
     - index.html     - login screen and entry point in to the program
     - pin.html       - 
-    - returns.html   - 
-    - selection.html -
+    - returns.html   - page for returning an animal
+    - selection.html - determining what data you want to look at
 
 - admin - contain html used by the admin site
 
@@ -38,8 +38,11 @@ DjangoDatabasesProject folder
 -----------------------------
 - contains all python files that apply to the entire site i.e. settings.py
 
-Heroku
-------
+Heroku Files
+------------
 - Procfile - lists the process types in PetDispense
 
-- .env - tells foreman the envs of the application
+- .env - stores the environment variables of the application
+
+- requirements.txt - tells heroku what pip packages to install
+
