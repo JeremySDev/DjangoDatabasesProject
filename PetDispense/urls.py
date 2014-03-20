@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 
 urlpatterns = patterns('',
                        url(r'^index/$', 'PetDispense.views.index', name=u"home"),
-                       url(r'^$', 'PetDispense.views.index', name=u"home"),
+                       url(r'^petdispense.herokuapp.com/$', 'PetDispense.views.index', name=u"home"),
                        url(r'^selection/$', 'PetDispense.views.selection', name=u"selection"),
                        url(r'^$', 'PetDispense.views.selection', name=u"selection"),
                        url(r'^about/index.html$', 'PetDispense.views.index', name=u"about"),
