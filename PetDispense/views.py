@@ -9,7 +9,7 @@ from PetDispense.models import AnimalInfo
 from PetDispense.tables import AnimalInfoTable
 
 
-def index(request):s
+def index(request):
     return render_to_response('PetDispense/index.html')
 
 
