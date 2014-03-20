@@ -1,7 +1,7 @@
 DjangoDatabasesProject
 ======================
-This software is only to be used as a course project in the Spring 2014 offering of CS453 <br> at
-Western Carolina University. It and any modification of it are not to be used in any other manner.<br>
+This software is only to be used as a course project in the Spring 2014 offering of CS453 at
+Western Carolina University. It and any modification of it are not to be used in any other manner.
 This Project is licensed under the GNU General Public License http://www.gnu.org/licenses/gpl-2.0.html
 
 PetDispense Folder - is for all python files related to the pet dispense
