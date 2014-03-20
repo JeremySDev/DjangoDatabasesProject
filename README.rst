@@ -34,9 +34,12 @@ Templates folder - contains all the html for all projects and is spilt for indiv
 
 - base.html - no html in this file it is just used by other html files to determine what css and js to get.
 
-DjangoDatabasesProject folder - contains all python files that apply to the entire site i.e. settings.py
---------------------------------------------------------------------------------
+DjangoDatabasesProject folder
+-----------------------------
+- contains all python files that apply to the entire site i.e. settings.py
 
+Heroku
+------
 - Procfile - lists the process types in PetDispense
 
 - .env - tells foreman the envs of the application
