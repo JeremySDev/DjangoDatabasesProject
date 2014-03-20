@@ -18,7 +18,7 @@ MANAGERS = ADMINS
 DATABASES = {'default': dj_database_url.config()}
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['petdispense.herokuapp.com']
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -107,13 +107,16 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'DjangoDatabasesProject.urls'
 
+SITE_ROOT = 'DjangoDatabasesProject'
+
+
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
     'django.contrib.auth.context_processors.auth',
 )
 
 TEMPLATE_DIRS = (
-    'templates',
+  os.path.join(SITE_ROOT, 'templates')
 )
 
 INSTALLED_APPS = (
