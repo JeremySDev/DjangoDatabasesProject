@@ -113,7 +113,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 TEMPLATE_DIRS = (
-    'DjangoDatabasesProject/templates/',
+    'templates',
 )
 
 INSTALLED_APPS = (
