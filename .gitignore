@@ -5,3 +5,5 @@ local_settings.py
 .idea/
 clear.sql
 .directory
+data_add.sql
+tmp.txt
