@@ -113,7 +113,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 TEMPLATE_DIRS = (
-    '/home/vagrant/MyHome/Dropbox/453_Databases/DjangoDatabasesProject/templates/',
+    'DjangoDatabasesProject/templates/',
 )
 
 INSTALLED_APPS = (
