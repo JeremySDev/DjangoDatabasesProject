@@ -76,8 +76,11 @@ class AnimalList(ListView):
 
 
 class AgeList(ListView):
-    queryset = AnimalInfo.objects.order_by('-birth_date')
+    template_name = 'PetDispense/animalinfo_list.html'
+    context_object_name = 'age_list'
 
+    def get_queryset(self):
+        return AnimalInfo.objects.order_by('-birth_date')
 
 
 
