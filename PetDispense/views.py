@@ -71,7 +71,7 @@ def species(request):
 
 
 class AnimalList(ListView):
-    queryset = AnimalInfo.objects.order_by('-animal_name')
+    queryset = AnimalInfo.objects.order_by('+animal_name')
 
 
 
