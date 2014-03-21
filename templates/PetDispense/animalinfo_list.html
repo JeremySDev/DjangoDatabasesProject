@@ -54,7 +54,7 @@
             <h2>In Shelter</h2>
             <ul>
                 {% for an in not_in_shelter_list %}
-                    <li>{{ an.animal_name }}</li>
+                    <li>{{ an. }}</li>
                 {% endfor %}
             </ul>
         {% endif %}
@@ -63,7 +63,7 @@
             <h2>All Cats and Dogs</h2>
             <ul>
                 {% for an in catdog_list %}
-                    <li>{{ an.animal_name }}</li>
+                    <li>{{ an.all }}</li>
                 {% endfor %}
             </ul>
         {% endif %}
@@ -72,7 +72,7 @@
             <h2>Number of Animals</h2>
             <ul>
                 {% for an in count_list %}
-                    <li>{{ an.animal_name }}</li>
+                    <li>{{ an.all }}</li>
                 {% endfor %}
             </ul>
         {% endif %}
@@ -81,7 +81,7 @@
             <h2>sort by Age</h2>
             <ul>
                 {% for an in agesortinfo_list %}
-                    <li>{{ an.animal_name }}</li>
+                    <li>{{ an.all }}</li>
                 {% endfor %}
             </ul>
         {% endif %}
@@ -90,7 +90,7 @@
             <h2>Youngest</h2>
             <ul>
                 {% for an in youngest_list %}
-                    <li>{{ an.animal_name }}</li>
+                    <li>{{ an.all }}</li>
                 {% endfor %}
             </ul>
         {% endif %}
@@ -99,7 +99,7 @@
             <h2>Sick in Shelter</h2>
             <ul>
                 {% for an in sheltersickinfo_list %}
-                    <li>{{ an.animal_name }}</li>
+                    <li>{{ an.all }}</li>
                 {% endfor %}
             </ul>
         {% endif %}
@@ -108,7 +108,7 @@
             <h2>Basic Info</h2>
             <ul>
                 {% for an in basicinfo2_list %}
-                    <li>{{ an.animal_name }}</li>
+                    <li>{{ an.all }}</li>
                 {% endfor %}
             </ul>
         {% endif %}
@@ -117,7 +117,7 @@
             <h2>Basic Info</h2>
             <ul>
                 {% for an in basicinfo_list %}
-                    <li>{{ an.animal_name }}</li>
+                    <li>{{ an.all }}</li>
                 {% endfor %}
             </ul>
         {% endif %}
@@ -126,7 +126,7 @@
             <h2>Medical Info</h2>
             <ul>
                 {% for an in medinfo_list %}
-                    <li>{{ an.animal_name }}</li>
+                    <li>{{ an.all }}</li>
                 {% endfor %}
             </ul>
         {% endif %}
@@ -135,7 +135,7 @@
             <h2>Owner List</h2>
             <ul>
                 {% for an in owner_list %}
-                    <li>{{ an.animal_name }}</li>
+                    <li>{{ an.all }}</li>
                 {% endfor %}
             </ul>
         {% endif %}
