@@ -9,7 +9,7 @@
     {% for AnimalInfo in query1 %}
         <h2>{{ AnimalInfo.animal_name }}</h2>
         <h3>Animals</h3>
-        <ul class="AnimalInfo">{% for sn in AnimalInfo.species_name.all %}
+        <ul class="AnimalInfo">{% for sn in AnimalInfo.animal_name.all %}
             <li>{{ sn.animal_name }}</li>{% endfor %}
         </ul>
     {% endfor %}
