@@ -1,5 +1,5 @@
 import django_tables2 as tables
-from PetDispense.models import Species, AnimalInfo
+from PetDispense.models import Species, Breeds, AnimalInfo
 
 
 class SpeciesTable(tables.Table):
@@ -8,6 +8,15 @@ class SpeciesTable(tables.Table):
 
     class Meta:
         model = Species
+
+
+class BreedsTable(tables.Table):
+    breed_id = tables.Column(verbose_name="ID")
+    breed_name = tables.Column(verbose_name="breed name")
+    species_id = tables.Column(verbose_name="S_ID")
+
+    class Meta:
+        model = Breeds
 
 
 class AnimalInfoTable(tables.Table):

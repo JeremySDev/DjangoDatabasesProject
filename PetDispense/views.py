@@ -4,10 +4,12 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
 from django.template import RequestContext
 from django_tables2 import RequestConfig
-from PetDispense.models import Species
-from PetDispense.tables import SpeciesTable
 from PetDispense.models import AnimalInfo
 from PetDispense.tables import AnimalInfoTable
+from PetDispense.models import Breeds
+from PetDispense.tables import BreedsTable
+from PetDispense.models import Species
+from PetDispense.tables import SpeciesTable
 
 
 def index(request):
@@ -54,14 +56,14 @@ def animal(request):
 
 
 def breeds(request):
-    table = AnimalInfoTable(AnimalInfo.objects.all())
+    table = BreedsTable(Breeds.objects.all())
     RequestConfig(request).configure(table)
     return render(request, 'PetDispense/breeds.html', {'table': table})
     #return render(request, "PetDispense/animals.html", {"Species": Species.objects.all()})
 
 
 def species(request):
-    table = AnimalInfoTable(AnimalInfo.objects.all())
+    table = SpeciesTable(Species.objects.all())
     RequestConfig(request).configure(table)
     return render(request, 'PetDispense/species.html', {'table': table})
     #return render(request, "PetDispense/animals.html", {"Species": Species.objects.all()})
