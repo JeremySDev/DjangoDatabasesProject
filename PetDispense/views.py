@@ -72,7 +72,7 @@ class AnimalList(ListView):
 
 
 class AgeList(ListView):
-    queryset = AnimalInfo.objects.order_by('-birth_date__year')
+    queryset = AnimalInfo.objects.order_by('-birth_date')
 
 
 
