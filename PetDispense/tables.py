@@ -13,13 +13,13 @@ class SpeciesTable(tables.Table):
 class BreedsTable(tables.Table):
     breed_id = tables.Column(verbose_name="ID")
     breed_name = tables.Column(verbose_name="breed name")
-    species_id = tables.Column(verbose_name="species ID")
+    #species_id = tables.Column(verbose_name="species ID")
     species_name = tables.Column(verbose_name="species name")
 
     class Meta:
         model = Breeds
         sequence = ("breed_id", "breed_name", "species_name")
-        exclude = ("species")
+        exclude = ("species_id")
 
 
 class AnimalInfoTable(tables.Table):
