@@ -71,6 +71,8 @@ class AnimalList(ListView):
     queryset = AnimalInfo.objects.filter(in_shelter__exact='false')
 
 
+class AnimalList(ListView):
+    queryset = AnimalInfo.objects.filter(in_shelter__exact='false')
 
 
 

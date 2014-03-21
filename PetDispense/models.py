@@ -1,6 +1,6 @@
 from django.db import models
 import datetime
-#import dateutil
+import dateutil
 
 
 class Species(models.Model):
@@ -24,12 +24,13 @@ class AnimalInfo(models.Model):
     animal_name = models.CharField(max_length=100, blank=False, null=False)
     species = models.ForeignKey(Species)
     breed = models.ForeignKey(Breeds)
-    #birth_date = models.DateField('birth date')
+    birth_date = models.DateField('birth date')
     in_shelter = models.BooleanField(default=True, blank=False, null=False)
-    #@property
-    #def age(self):
-    #    TODAY = datetime.date.today()
-    #    return u'%s' % dateutil.relativedelta(TODAY, self.birth_date).years
+
+    @property
+    def age(self):
+        today = datetime.date.today()
+        return u'%s' % dateutil.relativedelta(today, self.birth_date).years
 
     @property
     def species_name(self):
