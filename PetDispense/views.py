@@ -9,7 +9,7 @@ from PetDispense.tables import SpeciesTable
 from PetDispense.models import AnimalInfo
 from PetDispense.tables import AnimalInfoTable
 
-#
+
 def index(request):
     c = {}
     c.update(csrf(request))
