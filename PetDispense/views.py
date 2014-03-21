@@ -71,8 +71,8 @@ class AnimalList(ListView):
     queryset = AnimalInfo.objects.filter(in_shelter__exact='false')
 
 
-class AnimalList(ListView):
-    queryset = AnimalInfo.objects.filter(in_shelter__exact='false')
+class AgeList(ListView):
+    queryset = AnimalInfo.objects.order_by('-birth_date__year')
 
 
 
