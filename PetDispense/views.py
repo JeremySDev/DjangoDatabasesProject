@@ -82,12 +82,25 @@ class AgeList(ListView):
     def get_queryset(self):
         return AnimalInfo.objects.order_by('-birth_date')
 
-class AgeList(ListView):
+
+class CatDogList(ListView):
     template_name = 'PetDispense/animalinfo_list.html'
-    context_object_name = 'age_list'
+    context_object_name = 'catdog_list'
 
     def get_queryset(self):
-        return AnimalInfo.objects.order_by('-birth_date')
+        cat = 'Cat'
+        dog = 'Dog'
+        return AnimalInfo.objects.raw('SELECT animal_id, animal_name, species_name ' +
+                                      'FROM "PetDispense_animalinfo" ' +
+                                      'NATURAL JOIN "PetDispense_species" ' +
+                                      'WHERE species_name = %s ' +
+                                      'UNION ' +
+                                      'SELECT animal_id, animal_name, species_name ' +
+                                      'FROM "PetDispense_animalinfo" ' +
+                                      'NATURAL JOIN "PetDispense_species" ' +
+                                      'WHERE species_name = %s', [cat], [dog])
+
+
 
 
 
