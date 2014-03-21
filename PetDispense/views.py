@@ -10,7 +10,7 @@ from PetDispense.tables import AnimalInfoTable
 
 
 def index(request):
-    return render('PetDispense/index.html')
+    return render(request, 'PetDispense/index.html')
 
 
 def selection(request):
