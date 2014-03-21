@@ -19,7 +19,7 @@ class BreedsTable(tables.Table):
     class Meta:
         model = Breeds
         sequence = ("breed_id", "breed_name", "species_name")
-        exclude = ("species_id")
+        exclude = ("species_id", "species")
 
 
 class AnimalInfoTable(tables.Table):
