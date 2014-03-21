@@ -14,9 +14,11 @@ class BreedsTable(tables.Table):
     breed_id = tables.Column(verbose_name="ID")
     breed_name = tables.Column(verbose_name="breed name")
     species_id = tables.Column(verbose_name="S_ID")
+    species_name = tables.Column(verbose_name="species name")
 
     class Meta:
         model = Breeds
+        sequence = ("breed_id", "breed_name", "species_name")
 
 
 class AnimalInfoTable(tables.Table):
