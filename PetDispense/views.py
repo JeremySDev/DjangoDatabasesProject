@@ -1,4 +1,5 @@
 from django.shortcuts import get_object_or_404, render_to_response, render
+from django.core.context_processors import csrf
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
 from django.template import RequestContext
@@ -10,8 +11,9 @@ from PetDispense.tables import AnimalInfoTable
 
 
 def index(request):
-    return render_to_response('PetDispense/index.html')
-
+    c = {}
+    c.update(csrf(request))
+    return render_to_response("PetDispense/index.html", c)
 
 def selection(request):
     return render_to_response('PetDispense/selection.html')
