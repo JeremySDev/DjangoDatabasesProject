@@ -68,7 +68,11 @@ def species(request):
 
 
 class AnimalList(ListView):
-    queryset = AnimalInfo.objects.filter(in_shelter__exact='false')
+    template_name = 'PetDispense/animalinfo_list.html'
+    context_object_name = 'not_in_shelter_list'
+
+    def get_queryset(self):
+        return AnimalInfo.objects.filter(in_shelter__exact='false')
 
 
 class AgeList(ListView):
