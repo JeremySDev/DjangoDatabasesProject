@@ -45,7 +45,7 @@
     <div class="container">
 
         <legend>Agreement Form</legend>
-        <form method="POST" action="selection.html" accept-charset="UTF-8">{% csrf_token %}
+        <form method="POST" action="{% url 'selection' %}" accept-charset="UTF-8">{% csrf_token %}
             <p>
                 This software is only to be used as a course project in the Spring 2014 offering of CS453 <br> at
                 Western Carolina University. It and any modification of it are not to be used in any other manner.<br>
