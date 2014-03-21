@@ -6,10 +6,10 @@
 <body>
 {% block content %}
 
-    {% for animals in query1 %}
-        <h2>{{ animals.animal_name }}</h2>
+    {% for AnimalInfo in query1 %}
+        <h2>{{ AnimalInfo.animal_name }}</h2>
         <h3>Animals</h3>
-        <ul class="animals">{% for sn in animals.species_name.all %}
+        <ul class="AnimalInfo">{% for sn in AnimalInfo.species_name.all %}
             <li>{{ sn.animal_name }}</li>{% endfor %}
         </ul>
     {% endfor %}
