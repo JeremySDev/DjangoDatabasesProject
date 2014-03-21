@@ -58,3 +58,10 @@ def breeds(request):
     RequestConfig(request).configure(table)
     return render(request, 'PetDispense/breeds.html', {'table': table})
     #return render(request, "PetDispense/animals.html", {"Species": Species.objects.all()})
+
+
+def species(request):
+    table = AnimalInfoTable(AnimalInfo.objects.all())
+    RequestConfig(request).configure(table)
+    return render(request, 'PetDispense/species.html', {'table': table})
+    #return render(request, "PetDispense/animals.html", {"Species": Species.objects.all()})
