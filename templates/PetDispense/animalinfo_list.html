@@ -59,17 +59,8 @@
             </ul>
         {% endif %}
 
-        {% if age_list %}
-            <h2>sort by Age</h2>
-            <ul>
-                {% for an in age_list %}
-                    <li>{{ an.animal_name }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-
         {% if catdog_list %}
-            <h2>sort by Age</h2>
+            <h2>All Cats and Dogs</h2>
             <ul>
                 {% for an in catdog_list %}
                     <li>{{ an.animal_name }}</li>
@@ -78,7 +69,7 @@
         {% endif %}
 
         {% if count_list %}
-            <h2>sort by Age</h2>
+            <h2>Number of Animals</h2>
             <ul>
                 {% for an in count_list %}
                     <li>{{ an.animal_name }}</li>
@@ -96,7 +87,7 @@
         {% endif %}
 
         {% if youngest_list %}
-            <h2>sort by Age</h2>
+            <h2>Youngest</h2>
             <ul>
                 {% for an in youngest_list %}
                     <li>{{ an.animal_name }}</li>
@@ -105,7 +96,7 @@
         {% endif %}
 
         {% if sheltersickinfo_list %}
-            <h2>sort by Age</h2>
+            <h2>Sick in Shelter</h2>
             <ul>
                 {% for an in sheltersickinfo_list %}
                     <li>{{ an.animal_name }}</li>
@@ -114,7 +105,7 @@
         {% endif %}
 
         {% if basicinfo2_list %}
-            <h2>sort by Age</h2>
+            <h2>Basic Info</h2>
             <ul>
                 {% for an in basicinfo2_list %}
                     <li>{{ an.animal_name }}</li>
@@ -123,7 +114,7 @@
         {% endif %}
 
         {% if basicinfo_list %}
-            <h2>sort by Age</h2>
+            <h2>Basic Info</h2>
             <ul>
                 {% for an in basicinfo_list %}
                     <li>{{ an.animal_name }}</li>
@@ -132,16 +123,7 @@
         {% endif %}
 
         {% if medinfo_list %}
-            <h2>sort by Age</h2>
-            <ul>
-                {% for an in medinfo_list %}
-                    <li>{{ an.animal_name }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-
-        {% if medinfo_list %}
-            <h2>sort by Age</h2>
+            <h2>Medical Info</h2>
             <ul>
                 {% for an in medinfo_list %}
                     <li>{{ an.animal_name }}</li>
@@ -150,7 +132,7 @@
         {% endif %}
 
         {% if owner_list %}
-            <h2>sort by Age</h2>
+            <h2>Owner List</h2>
             <ul>
                 {% for an in owner_list %}
                     <li>{{ an.animal_name }}</li>
