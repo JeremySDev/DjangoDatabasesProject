@@ -53,30 +53,22 @@ def animal(request):
     table = AnimalInfoTable(AnimalInfo.objects.all())
     RequestConfig(request).configure(table)
     return render(request, 'PetDispense/animals.html', {'table': table})
-    #return render(request, "PetDispense/animals.html", {"Species": Species.objects.all()})
 
 
 def breeds(request):
     table = BreedsTable(Breeds.objects.all())
     RequestConfig(request).configure(table)
     return render(request, 'PetDispense/breeds.html', {'table': table})
-    #return render(request, "PetDispense/animals.html", {"Species": Species.objects.all()})
 
 
 def species(request):
     table = SpeciesTable(Species.objects.all())
     RequestConfig(request).configure(table)
     return render(request, 'PetDispense/species.html', {'table': table})
-    #return render(request, "PetDispense/animals.html", {"Species": Species.objects.all()})
 
 
 class AnimalList(ListView):
-    queryset = AnimalInfo.objects.order_by('-animal_name')
-
-
-
-
-
+    queryset = AnimalInfo.objects.filter(in_shelter__exact='false')
 
 
 
