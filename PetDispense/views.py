@@ -1,4 +1,4 @@
-from django.shortcuts import get_object_or_404, render, render_to_response
+from django.shortcuts import get_object_or_404, render_to_response, render
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
 from django.template import RequestContext
@@ -7,43 +7,38 @@ from PetDispense.models import Species
 from PetDispense.tables import SpeciesTable
 from PetDispense.models import AnimalInfo
 from PetDispense.tables import AnimalInfoTable
-from django.core.context_processors import csrf
 
 
 def index(request):
-    c = {}
-    c.update(csrf(request))
-    # ... view code here
-    return render_to_response("PetDispense/index.html", c)
-    #return render(request, 'PetDispense/index.html')
+    return render_to_response('PetDispense/index.html')
 
 
 def selection(request):
-    return render('PetDispense/selection.html')
+    return render_to_response('PetDispense/selection.html')
 
 
 def contact(request):
-    return render('PetDispense/selection.html')
+    return render_to_response('PetDispense/selection.html')
 
 
 def about(request):
-    return render('PetDispense/about.html')
+    return render_to_response('PetDispense/about.html')
 
 
 def agreement(request):
-    return render('PetDispense/agreement.html')
+    return render_to_response('PetDispense/agreement.html')
 
 
 def confirm(request):
-    return render('PetDispense/confirm.html')
+    return render_to_response('PetDispense/confirm.html')
 
 
 def returns(request):
-    return render('PetDispense/returns.html')
+    return render_to_response('PetDispense/returns.html')
 
 
 def pin(request):
-    return render('PetDispense/pin.html')
+    return render_to_response('PetDispense/pin.html')
 
 
 def animal(request):
