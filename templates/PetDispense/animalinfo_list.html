@@ -7,8 +7,8 @@
 {% block content %}
     <h2>AnimalName</h2>
     <ul>
-        {% for animal_name in AnimalInfo %}
-            <li>{{ animal_name.breed }}</li>
+        {% for an in AnimalInfo %}
+            <li>{{ an.animal_name }}</li>
         {% endfor %}
     </ul>
 {% endblock %}
