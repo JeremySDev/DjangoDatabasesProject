@@ -1,0 +1,41 @@
+select animal_id, animal_name,
+from "PetDispense_animalinfo", Owners,
+"where" "PetDispense_animalinfo".animal_id = Owners.animal_id;
+
+select animal_id, animal_name,
+from "PetDispense_animalinfo", Med_Info,
+"where" "PetDispense_animalinfo".animal_id = Med_Info.animal_id;
+
+select species_id,
+from Breeds, Species,
+"where" Breeds.species_name = Species.species_name;
+
+select animal_id, in_shelter,
+from "PetDispense_animalinfo", Breeds,
+"where" "PetDispense_animalinfo".breed_name = Breeds.breed_name;
+
+select animal_id, in_shelter, has_illness,
+from "PetDispense_animalinfo", Med_Info,
+"where" "PetDispense_animalinfo".animal_name = Med_Info.animal_name;
+
+select animal_name, breed_name, species_name,
+from "PetDispense_animalinfo",
+"group" by breed_name,
+having avg(age) < 5;
+
+select min(age) as min_age,
+from "PetDispense_animalinfo",
+"where" in_shelter = true;
+
+select *,
+from "PetDispense_animalinfo",
+"order" by age asc;
+
+(select animal_id, animal_name from "PetDispense_animalinfo" where species_name = 'Cat'),
+union,
+(select animal_id, animal_name from "PetDispense_animalinfo" where species_name = 'Dog');
+
+
+select count(*),
+from "PetDispense_animalinfo",
+"where" in_shelter = true;

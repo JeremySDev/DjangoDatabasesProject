@@ -67,3 +67,27 @@ def species(request):
     RequestConfig(request).configure(table)
     return render(request, 'PetDispense/species.html', {'table': table})
     #return render(request, "PetDispense/animals.html", {"Species": Species.objects.all()})
+
+
+def query1(request, animals):
+    return render_to_response('PetDispense/query1.html', {
+        'animals': (AnimalInfo.objects.filter(species_name="Dog").distinct().prefetch_related("species_name").order_by("animal_name")[:20])
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

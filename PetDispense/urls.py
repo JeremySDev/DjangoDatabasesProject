@@ -16,4 +16,5 @@ urlpatterns = patterns('',
                        url(r'^breeds$', 'PetDispense.views.breeds', name=u"breeds"),
                        url(r'^species$', 'PetDispense.views.species', name=u"species"),
                        url(r'^contact/$', 'PetDispense.views.contact', name=u"contact"),
+                       url(r'^query/$', 'PetDispense.views.query1', name=u"query"),
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
