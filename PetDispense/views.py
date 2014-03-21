@@ -71,7 +71,7 @@ def species(request):
 
 def query1(request):
     return render_to_response('PetDispense/query1.html', {
-        'animals': (AnimalInfo.objects.filter(species_name="Dog").distinct().prefetch_related("species_name").order_by("animal_name")[:20])
+        'animals': (AnimalInfo.objects.filter(in_shelter="true").distinct().prefetch_related("in_shelter").order_by("animal_name")[:20])
         })
 
 
