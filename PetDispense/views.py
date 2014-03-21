@@ -178,7 +178,7 @@ class CatDogList(ListView):
 
 class CountInShelterList(ListView):
     template_name = 'PetDispense/animalinfo_list.html'
-    context_object_name = 'catdog_list'
+    context_object_name = 'count_list'
 
     def get_queryset(self):
         return AnimalInfo.objects.raw('SELECT count(*) ' +
