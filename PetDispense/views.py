@@ -83,6 +83,80 @@ class AgeList(ListView):
         return AnimalInfo.objects.order_by('-birth_date')
 
 
+class OwnerList(ListView):
+    template_name = 'PetDispense/animalinfo_list.html'
+    context_object_name = 'owner_list'
+
+    def get_queryset(self):
+        return AnimalInfo.objects.raw('SELECT "PetDispense_animalinfo".animal_id, animal_name, owner_firstname ' +
+                                      'FROM "PetDispense_animalinfo" ' +
+                                      'NATURAL JOIN "PetDispense_owners"')
+
+class MedInfoList(ListView):
+    template_name = 'PetDispense/animalinfo_list.html'
+    context_object_name = 'medinfo_list'
+
+    def get_queryset(self):
+        return AnimalInfo.objects.raw('SELECT "PetDispense_animalinfo".animal_id, animal_name, vaccinations, has_illness, illness ' +
+                                      'FROM "PetDispense_animalinfo" ' +
+                                      'NATURAL JOIN "PetDispense_medicalinfo"')
+
+
+class BasicInfoList(ListView):
+    template_name = 'PetDispense/animalinfo_list.html'
+    context_object_name = 'basicinfo_list'
+
+    def get_queryset(self):
+        return AnimalInfo.objects.raw('SELECT "PetDispense_animalinfo".animal_id, animal_name, species_name, breed_name ' +
+                                      'FROM "PetDispense_animalinfo" ' +
+                                      'NATURAL JOIN ("PetDispense_breeds" ' +
+                                      'NATURAL JOIN "PetDispense_species")')
+
+
+class BasicInfo2List(ListView):
+    template_name = 'PetDispense/animalinfo_list.html'
+    context_object_name = 'basicinfo2_list'
+
+    def get_queryset(self):
+        return AnimalInfo.objects.raw('SELECT "PetDispense_animalinfo".animal_id, in_shelter ' +
+                                      'FROM "PetDispense_animalinfo" ' +
+                                      'NATURAL JOIN "PetDispense_breeds"')
+
+
+class ShelterSickList(ListView):
+    template_name = 'PetDispense/animalinfo_list.html'
+    context_object_name = 'sheltersickinfo_list'
+
+    def get_queryset(self):
+        return AnimalInfo.objects.raw('SELECT "PetDispense_animalinfo".animal_id, animal_name, in_shelter, has_illness ' +
+                                      'FROM "PetDispense_animalinfo" ' +
+                                      'NATURAL JOIN "PetDispense_medicalinfo"')
+
+
+class YoungestList(ListView):
+    template_name = 'PetDispense/animalinfo_list.html'
+    context_object_name = 'youngest_list'
+
+    def get_queryset(self):
+        return AnimalInfo.objects.raw('SELECT animal_name, birth_date, in_shelter ' +
+                                      'FROM "PetDispense_animalinfo" ' +
+                                      'JOIN (SELECT max(birth_date) AS max_age ' +
+                                      'FROM "PetDispense_animalinfo" ' +
+                                      'WHERE in_shelter = "true") ' +
+                                      'AS "t1" ' +
+                                      'ON t1.max_age = "PetDispense_animalinfo".birth_date')
+
+
+class AgeSortList(ListView):
+    template_name = 'PetDispense/animalinfo_list.html'
+    context_object_name = 'agesortinfo_list'
+
+    def get_queryset(self):
+        return AnimalInfo.objects.raw('SELECT * ' +
+                                      'FROM "PetDispense_animalinfo" ' +
+                                      'ORDER BY birth_date ASC')
+
+
 class CatDogList(ListView):
     template_name = 'PetDispense/animalinfo_list.html'
     context_object_name = 'catdog_list'
@@ -102,7 +176,14 @@ class CatDogList(ListView):
 
 
 
+class CountInShelterList(ListView):
+    template_name = 'PetDispense/animalinfo_list.html'
+    context_object_name = 'catdog_list'
 
+    def get_queryset(self):
+        return AnimalInfo.objects.raw('SELECT count(*) ' +
+                                      'FROM "PetDispense_animalinfo" ' +
+                                      'WHERE in_shelter = "true"')
 
 
 

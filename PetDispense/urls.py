@@ -2,7 +2,7 @@ from django.conf.urls import patterns, include, url
 from django.conf import settings
 from django.conf.urls.static import static
 #from django.views.generic import DetailView, ListView
-from PetDispense.views import AnimalList, AgeList
+from PetDispense.views import AnimalList, AgeList, OwnerList, MedInfoList, BasicInfoList, BasicInfo2List, ShelterSickList, YoungestList, AgeSortList, CatDogList, CountInShelterList
 
 urlpatterns = patterns('',
                        url(r'^$', 'PetDispense.views.index', name=u"home"),
@@ -19,12 +19,13 @@ urlpatterns = patterns('',
                        url(r'^contact/$', 'PetDispense.views.contact', name=u"contact"),
                        url(r'^query0/$', AnimalList.as_view()),
                        url(r'^query1/$', AgeList.as_view()),
-                       url(r'^query2/$', AgeList.as_view()),
-                       url(r'^query3/$', AgeList.as_view()),
-                       url(r'^query4/$', AgeList.as_view()),
-                       url(r'^query5/$', AgeList.as_view()),
-                       url(r'^query6/$', AgeList.as_view()),
-                       url(r'^query7/$', AgeList.as_view()),
-                       url(r'^query8/$', AgeList.as_view()),
-                       url(r'^query9/$', AgeList.as_view()),
+                       url(r'^query2/$', OwnerList.as_view()),
+                       url(r'^query3/$', MedInfoList.as_view()),
+                       url(r'^query4/$', BasicInfoList.as_view()),
+                       url(r'^query5/$', BasicInfo2List.as_view()),
+                       url(r'^query6/$', ShelterSickList.as_view()),
+                       url(r'^query7/$', YoungestList.as_view()),
+                       url(r'^query8/$', AgeSortList.as_view()),
+                       url(r'^query9/$', CatDogList.as_view()),
+                       url(r'^query10/$', CountInShelterList.as_view()),
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
