@@ -3,6 +3,7 @@ from django.core.context_processors import csrf
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
 from django.template import RequestContext
+from django.views.generic import ListView
 from django_tables2 import RequestConfig
 from PetDispense.models import AnimalInfo
 from PetDispense.tables import AnimalInfoTable
