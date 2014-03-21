@@ -1,4 +1,5 @@
 from django.db import models
+from dateutil.relativedelta import relativedelta
 import datetime
 import dateutil
 
@@ -30,7 +31,7 @@ class AnimalInfo(models.Model):
     @property
     def age(self):
         today = datetime.date.today()
-        return u'%s' % dateutil.relativedelta(today, self.birth_date).years
+        return u'%s' % (today.year - self.birth_date.year)
 
     @property
     def species_name(self):

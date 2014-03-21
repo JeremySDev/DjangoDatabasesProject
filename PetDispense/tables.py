@@ -28,5 +28,5 @@ class AnimalInfoTable(tables.Table):
 
     class Meta:
         model = AnimalInfo
-        sequence = ("animal_id", "animal_name", "species_name", "breed_name", "in_shelter")
-        exclude = ("species", "breed")
+        sequence = ("animal_id", "animal_name", "species_name", "breed_name", "age", "in_shelter")
+        exclude = ("species", "breed", "birth_date")
