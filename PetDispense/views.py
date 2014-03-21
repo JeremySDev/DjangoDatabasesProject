@@ -15,6 +15,7 @@ def index(request):
     c.update(csrf(request))
     return render_to_response("PetDispense/index.html", c)
 
+
 def selection(request):
     return render_to_response('PetDispense/selection.html')
 
@@ -28,7 +29,9 @@ def about(request):
 
 
 def agreement(request):
-    return render_to_response('PetDispense/agreement.html')
+    c = {}
+    c.update(csrf(request))
+    return render_to_response("PetDispense/agreement.html", c)
 
 
 def confirm(request):
