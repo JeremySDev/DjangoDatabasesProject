@@ -5,15 +5,12 @@
 </head>
 <body>
 {% block content %}
-
-    {% for AnimalInfo in query1 %}
-        <h2>{{ AnimalInfo.animal_name }}</h2>
-        <h3>Animals</h3>
-        <ul class="AnimalInfo">{% for sn in AnimalInfo.animal_name.all %}
-            <li>{{ sn.animal_name }}</li>{% endfor %}
-        </ul>
-    {% endfor %}
-
+    <h2>Publishers</h2>
+    <ul>
+        {% for animal_name in AnimalInfo %}
+            <li>{{ animal_name.breed }}</li>
+        {% endfor %}
+    </ul>
 {% endblock %}
 </body>
 </html>
