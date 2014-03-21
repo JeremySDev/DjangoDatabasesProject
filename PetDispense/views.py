@@ -1,4 +1,4 @@
-from django.shortcuts import get_object_or_404, render_to_response, render
+from django.shortcuts import get_object_or_404, render, render
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
 from django.template import RequestContext
@@ -10,35 +10,35 @@ from PetDispense.tables import AnimalInfoTable
 
 
 def index(request):
-    return render_to_response('PetDispense/index.html')
+    return render('PetDispense/index.html')
 
 
 def selection(request):
-    return render_to_response('PetDispense/selection.html')
+    return render('PetDispense/selection.html')
 
 
 def contact(request):
-    return render_to_response('PetDispense/selection.html')
+    return render('PetDispense/selection.html')
 
 
 def about(request):
-    return render_to_response('PetDispense/about.html')
+    return render('PetDispense/about.html')
 
 
 def agreement(request):
-    return render_to_response('PetDispense/agreement.html')
+    return render('PetDispense/agreement.html')
 
 
 def confirm(request):
-    return render_to_response('PetDispense/confirm.html')
+    return render('PetDispense/confirm.html')
 
 
 def returns(request):
-    return render_to_response('PetDispense/returns.html')
+    return render('PetDispense/returns.html')
 
 
 def pin(request):
-    return render_to_response('PetDispense/pin.html')
+    return render('PetDispense/pin.html')
 
 
 def animal(request):
