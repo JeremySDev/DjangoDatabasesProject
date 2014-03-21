@@ -1,0 +1,43 @@
+﻿5 User Stories 3/20/14
+
+
+Feature: Logging in
+In order to use the service, a user must log into the site.
+An an employee.
+I want to be able to log into the site to use its services.
+
+
+Scenario: Accepted login information
+Given that I have an account set up on the site.
+When I enter the correct username and password information.
+Then I will be able to view the restrictions page.
+
+
+Scenario: Declined login information
+Given that I have an account set up on the site.
+When I enter the incorrect username and password information.
+Then I will be notified of the mistake and asked to log in using the correct credentials.
+
+
+Scenario: Forgotten login information
+Given that I have an account set up on the site and have forgotten my login credentials.
+When I click on “Forgot Password.”
+Then a page will load that will allow me to reset my password.
+
+
+Feature: Using the restrictions page
+In order to use the service, the user must accept the restrictions page.
+As an employee
+I want to be able to use the application if I accept the restrictions.
+
+
+Scenario: Accept the restriction page
+Given that I am on the restrictions page, and logged in.
+When I click on “Accept.”
+Then I will move to the next page of the application.
+
+
+Scenario: Decline the restriction page
+Given that I am on the restrictions page, and logged in.
+When I click on “Decline.”
+Then I will be logged out and returned to the login page.
