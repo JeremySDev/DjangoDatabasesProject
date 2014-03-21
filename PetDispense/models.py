@@ -12,7 +12,10 @@ class Breeds(models.Model):
     breed_id = models.IntegerField(primary_key=True)
     breed_name = models.CharField(max_length=100, blank=False, null=False)
     species = models.ForeignKey(Species)
-    #species_name = species.species_name
+
+    @property
+    def species_name(self):
+        return u"%s" % self.species.species_name
     #characteristics
 
 
