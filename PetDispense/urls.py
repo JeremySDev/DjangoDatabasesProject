@@ -2,6 +2,7 @@ from django.conf.urls import patterns, include, url
 from django.conf import settings
 from django.conf.urls.static import static
 #from django.views.generic import DetailView, ListView
+from PetDispense.views import AnimalList
 
 urlpatterns = patterns('',
                        url(r'^$', 'PetDispense.views.index', name=u"home"),
@@ -16,5 +17,5 @@ urlpatterns = patterns('',
                        url(r'^breeds$', 'PetDispense.views.breeds', name=u"breeds"),
                        url(r'^species$', 'PetDispense.views.species', name=u"species"),
                        url(r'^contact/$', 'PetDispense.views.contact', name=u"contact"),
-                       url(r'^query/$', 'PetDispense.views.query1', name=u"query"),
+                       url(r'^query/$', AnimalList.as_view()),
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

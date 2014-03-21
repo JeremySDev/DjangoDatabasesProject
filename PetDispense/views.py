@@ -69,8 +69,8 @@ def species(request):
     #return render(request, "PetDispense/animals.html", {"Species": Species.objects.all()})
 
 
-def query1(request):
-    return render_to_response('PetDispense/query1.html')
+class AnimalList(ListView):
+    model = AnimalInfo
 
 
 
