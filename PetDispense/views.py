@@ -1,4 +1,4 @@
-from django.shortcuts import get_object_or_404, render, render
+from django.shortcuts import get_object_or_404, render, render_to_response
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
 from django.template import RequestContext
@@ -7,10 +7,15 @@ from PetDispense.models import Species
 from PetDispense.tables import SpeciesTable
 from PetDispense.models import AnimalInfo
 from PetDispense.tables import AnimalInfoTable
+from django.core.context_processors import csrf
 
 
 def index(request):
-    return render(request, 'PetDispense/index.html')
+    c = {}
+    c.update(csrf(request))
+    # ... view code here
+    return render_to_response("PetDispense/index.html", c)
+    #return render(request, 'PetDispense/index.html')
 
 
 def selection(request):
