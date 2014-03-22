@@ -51,10 +51,10 @@
     <div class="container">
 
         {% if not_in_shelter_list %}
-            <h2>In Shelter</h2>
+            <h2>Not in Shelter</h2>
             <ul>
                 {% for an in not_in_shelter_list %}
-                    <li>{{ an. }}</li>
+                    <li>{{ an.animal_name }}{{ an.breed }}</li>
                 {% endfor %}
             </ul>
         {% endif %}

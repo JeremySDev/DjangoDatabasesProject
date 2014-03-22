@@ -92,6 +92,7 @@ class OwnerList(ListView):
                                       'FROM "PetDispense_animalinfo" ' +
                                       'NATURAL JOIN "PetDispense_owners"')
 
+
 class MedInfoList(ListView):
     template_name = 'PetDispense/animalinfo_list.html'
     context_object_name = 'medinfo_list'
@@ -173,7 +174,6 @@ class CatDogList(ListView):
                                       'FROM "PetDispense_animalinfo" ' +
                                       'NATURAL JOIN "PetDispense_species" ' +
                                       'WHERE species_name = %s', [cat], [dog])
-
 
 
 class CountInShelterList(ListView):
