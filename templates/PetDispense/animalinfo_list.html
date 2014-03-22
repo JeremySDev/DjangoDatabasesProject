@@ -49,23 +49,64 @@
     </div>
 
     <div class="container">
-
         {% if not_in_shelter_list %}
             <h2>Not in Shelter</h2>
-            <ul>
+            <table>
+                <tr>
+                    <th>Animal Name</th>
+                    <th>Breed</th>
+                    <th>Species</th>
+                    <th>Age</th>
+                </tr>
                 {% for an in not_in_shelter_list %}
-                    <li>{{ an.animal_name }}{{ an.breed }}</li>
+                    <tr>
+                        <td>{{ an.animal_name }}</td>
+                        <td>{{ an.breed_name }}</td>
+                        <td>{{ an.species_name }}</td>
+                        <td>{{ an.age }}</td>
+                    </tr>
                 {% endfor %}
-            </ul>
+            </table>
+        {% endif %}
+
+        {% if owner_list %}
+            <h2>Owners List</h2>
+            <table>
+                <tr>
+                    <th>Animal Name</th>
+                    <th>Breed</th>
+                    <th>Species</th>
+                    <th>Age</th>
+                </tr>
+                {% for an in owner_list %}
+                    <tr>
+                        <td>{{ an.animal_name }}</td>
+                        <td>{{ an.breed_name }}</td>
+                        <td>{{ an.species_name }}</td>
+                        <td>{{ an.age }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
         {% endif %}
 
         {% if catdog_list %}
             <h2>All Cats and Dogs</h2>
-            <ul>
-                {% for an in catdog_list %}
-                    <li>{{ an.all }}</li>
+            <table>
+                <tr>
+                    <th>Animal Name</th>
+                    <th>Breed</th>
+                    <th>Species</th>
+                    <th>Age</th>
+                </tr>
+                {% for an in not_in_shelter_list %}
+                    <tr>
+                        <td>{{ an.animal_name }}</td>
+                        <td>{{ an.breed_name }}</td>
+                        <td>{{ an.species_name }}</td>
+                        <td>{{ an.age }}</td>
+                    </tr>
                 {% endfor %}
-            </ul>
+            </table>
         {% endif %}
 
         {% if count_list %}
@@ -131,14 +172,6 @@
             </ul>
         {% endif %}
 
-        {% if owner_list %}
-            <h2>Owner List</h2>
-            <ul>
-                {% for an in owner_list %}
-                    <li>{{ an.all }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
 
     </div>
     </body>
