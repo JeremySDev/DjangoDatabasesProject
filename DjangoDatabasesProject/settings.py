@@ -15,12 +15,21 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASES = {'default': dj_database_url.config()}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'petdispense',
+        'USER': 'vagrant',
+        'PASSWORD': 'vagrant',
+        'HOST': '127.0.01',
+        'PORT': '5432',
+    },
+    'heroku': dj_database_url.config()
+}
+
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ['petdispense.herokuapp.com']
-
-# Local time zone for this installation. Choices can be found here:
+ALLOWED_HOSTS = ['petdispense.herokuapp.com']  # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # On Unix systems, a value of None will cause Django to use the same
