@@ -139,11 +139,11 @@ class YoungestList(ListView):
     context_object_name = 'youngest_list'
 
     def get_queryset(self):
-        return AnimalInfo.objects.raw('SELECT animal_name, birth_date, in_shelter ' +
+        return AnimalInfo.objects.raw('SELECT animal_id, animal_name, birth_date, in_shelter ' +
                                       'FROM "PetDispense_animalinfo" ' +
                                       'JOIN (SELECT max(birth_date) AS max_age ' +
                                       'FROM "PetDispense_animalinfo" ' +
-                                      'WHERE in_shelter = "true") ' +
+                                      'WHERE in_shelter = true) ' +
                                       'AS "t1" ' +
                                       'ON t1.max_age = "PetDispense_animalinfo".birth_date')
 
@@ -175,6 +175,8 @@ class CatDogList(ListView):
                                       'NATURAL JOIN "PetDispense_species" ' +
                                       'WHERE species_name = %s', [cat], [dog])
 
+#need new query can't really use this one because doesn't return rows
+
 
 class CountInShelterList(ListView):
     template_name = 'PetDispense/animalinfo_list.html'
@@ -183,7 +185,7 @@ class CountInShelterList(ListView):
     def get_queryset(self):
         return AnimalInfo.objects.raw('SELECT count(*) ' +
                                       'FROM "PetDispense_animalinfo" ' +
-                                      'WHERE in_shelter = "true"')
+                                      'WHERE in_shelter = true')
 
 
 

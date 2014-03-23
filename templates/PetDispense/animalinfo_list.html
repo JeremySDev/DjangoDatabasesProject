@@ -50,6 +50,7 @@
 
     <div class="container">
 
+    <!--Query0 -->
     {% if not_in_shelter_list %}
         <h2>Not in Shelter</h2>
         <table>
@@ -69,7 +70,7 @@
             {% endfor %}
         </table>
     {% endif %}
-
+    <!--Query1 -->
     {% if owner_list %}
         <h2>Owners List</h2>
         <table>
@@ -89,7 +90,7 @@
             {% endfor %}
         </table>
     {% endif %}
-
+    <!--Query2 -->
     {% if medinfo_list %}
         <h2>Medical Info</h2>
         <table>
@@ -109,8 +110,9 @@
             {% endfor %}
         </table>
     {% endif %}
-
+    <!--Query3 -->
     {% if basicinfo_list %}
+        <h2>Basic Info</h2>
         <table>
             <tr>
                 <th>Animal Name</th>
@@ -128,9 +130,9 @@
             {% endfor %}
         </table>
     {% endif %}
-
+    <!--Query4 -->
     {% if basicinfo2_list %}
-        <h2>Basic Info</h2>
+        <h2>Basic Info2</h2>
         <table>
             <tr>
                 <th>Animal Name</th>
@@ -148,7 +150,7 @@
             {% endfor %}
         </table>
     {% endif %}
-
+    <!--Query5 -->
     {% if sheltersickinfo_list %}
         <h2>Sick in Shelter</h2>
         <table>
@@ -168,7 +170,7 @@
             {% endfor %}
         </table>
     {% endif %}
-
+    <!--Query6 -->
     {% if youngest_list %}
         <h2>Youngest</h2>
         <table>
@@ -188,7 +190,7 @@
             {% endfor %}
         </table>
     {% endif %}
-
+    <!--Query7 -->
     {% if agesortinfo_list %}
         <h2>sort by Age</h2>
         <table>
@@ -208,7 +210,7 @@
             {% endfor %}
         </table>
     {% endif %}
-
+    <!--Query8 -->
     {% if catdog_list %}
         <h2>All Cats and Dogs</h2>
         <table>
@@ -228,7 +230,7 @@
             {% endfor %}
         </table>
     {% endif %}
-
+    <!--Query9 -->
     {% if count_list %}
         <h2>Number of Animals</h2>
         <table>

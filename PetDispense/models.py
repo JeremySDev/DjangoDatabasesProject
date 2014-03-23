@@ -43,7 +43,8 @@ class AnimalInfo(models.Model):
 
     @property
     def __unicode__(self):
-        return self.animal_id  #, self.animal_name, self.species, self.breed, self.in_shelter
+        return self.animal_id
+        #, self.animal_name, self.species, self.breed, self.in_shelter
 
 
 class Owners(models.Model):
