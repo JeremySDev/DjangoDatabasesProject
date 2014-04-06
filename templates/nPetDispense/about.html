@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html>
+<head>
+    <title>About Us</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="navbar navbar-fixed-top  navbar-inverse">
+    <div class="container">
+        <div class="navbar-inner">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
+                    class="icon-bar"></span><span class="icon-bar"></span>
+            </button>
+            <a href="{% url 'home' %}" class="navbar-brand">Pet Dispense</a>
+        </div>
+        <div class="collapse navbar-collapse pull-right">
+            <ul class="nav navbar-nav">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li class="active"><a href="#">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+<div class="container">
+    <h1>About Us</h1>
+
+    <p> This software is only to be used as a course project in the Spring 2014 offering of CS453 <br> at
+        Western Carolina University. It and any modification of it are not to be used in any other manner.<br>
+        This Project is licensed under the <a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public
+            License</a>
+        and was developed by:<br>
+        <a href="https://github.com/JeremySDev">Jeremy Stilwell</a><br>
+        <a href="https://github.com/sdune">Susan Dune</a><br>
+        <a href="https://github.com/tjmitchell1">TJ Mitchell</a><br>
+    </p>
+</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -21,7 +21,7 @@ DATABASES = {
         'NAME': 'petdispense',
         'USER': 'vagrant',
         'PASSWORD': 'vagrant',
-        'HOST': '127.0.01',
+        'HOST': '127.0.0.1',
         'PORT': '5432',
     },
     'heroku': dj_database_url.config()

@@ -24,7 +24,7 @@ def selection(request):
 
 
 def contact(request):
-    return render_to_response('PetDispense/selection.html')
+    return render_to_response('PetDispense/contact.html')
 
 
 def about(request):
