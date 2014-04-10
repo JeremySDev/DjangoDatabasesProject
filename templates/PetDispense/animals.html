@@ -26,19 +26,17 @@
     </head>
 
     <body>
-
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container">
-                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+    <div class="navbar navbar-fixed-top  navbar-inverse">
+        <div class="container">
+            <div class="navbar-inner">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
+                        class="icon-bar"></span><span class="icon-bar"></span>
                 </button>
-                <a class="brand" href="{% url 'home' %}">Pet Dispense</a>
-
-                <div class="nav-collapse collapse pull-right">
-                    <ul class="nav">
+                <a href="{% url 'home' %}" class="navbar-brand">Pet Dispense</a>
+            </div>
+            <div class="collapse navbar-collapse pull-right">
+                <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Animals</a></li>
                         <li><a href="{% url 'breeds' %}">Breeds</a></li>
                         <li><a href="{% url 'species' %}">Species</a></li>
