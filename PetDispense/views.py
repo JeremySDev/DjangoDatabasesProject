@@ -48,10 +48,12 @@ def search(request):
     context = RequestContext(request)
     return render_to_response('PetDispense/results.html', {"results": results}, context_instance=context)
 
+
 def query(request):
     c = {}
     c.update(csrf(request))
     return render_to_response("PetDispense/query.html", c)
+
 
 def index(request):
     c = {}

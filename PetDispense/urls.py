@@ -20,6 +20,8 @@ urlpatterns = patterns('',
                        url(r'^species$', 'PetDispense.views.species', name=u"species"),
                        url(r'^contact/$', 'PetDispense.views.contact', name=u"contact"),
                        url(r'^query/$', 'PetDispense.views.query', name=u"query"),
+                       url(r'^query/results.html$', 'PetDispense.views.search', name=u"search"),
+
                        #url(r'^query$', 'PetDispense.views.post_form_upload', name='post_form_upload'),
                        url(r'^query0/$', AnimalList.as_view(), name=u"query0"),
                        url(r'^query1/$', AgeList.as_view(), name=u"query1"),
