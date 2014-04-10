@@ -39,7 +39,7 @@ def search(request):
     results = None
     query = request.GET.get('q')
     try:
-        query = int(query)
+        query = str(query)
     except ValueError:
         query = None
         results = None
