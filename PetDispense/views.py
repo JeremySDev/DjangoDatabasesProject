@@ -13,6 +13,21 @@ from PetDispense.models import Species
 from PetDispense.tables import SpeciesTable
 
 
+def search(request):
+    results = None
+    query = request.GET.get('q')
+    try:
+        query = int(query)
+    except ValueError:
+        query = None
+        results = None
+    if query:
+        results = AnimalInfo.objects.get(uid=query)
+    context = RequestContext(request)
+    return render_to_response('results.html', {"results": results}, context_instance=context)
+
+
+
 def index(request):
     c = {}
     c.update(csrf(request))
