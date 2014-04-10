@@ -16,15 +16,7 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'petdispense',
-        'USER': 'vagrant',
-        'PASSWORD': 'vagrant',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
-    },
-    'heroku': dj_database_url.config()
+    'default': dj_database_url.config(),
 }
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
