@@ -37,14 +37,14 @@ def post_form_upload(request):
 
 def search(request):
     results = None
-    query = request.GET.get('q')
+    query1 = request.GET.get('q')
     try:
-        query = str(query)
+        query1 = str(query)
     except ValueError:
-        query = None
+        query1 = None
         results = None
-    if query:
-        results = AnimalInfo.objects.get(animal_name=query)
+    if query1:
+        results = AnimalInfo.objects.get(animal_name=query1)
     context = RequestContext(request)
     return render_to_response('PetDispense/results.html', {"results": results}, context_instance=context)
 
