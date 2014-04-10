@@ -37,9 +37,9 @@ def post_form_upload(request):
 
 def search(request):
     results = None
-    query1 = request.GET.get('q')
+    query2 = request.GET.get('q')
     try:
-        query1 = str(query)
+        query1 = str(query2)
     except ValueError:
         query1 = None
         results = None
