@@ -2,6 +2,7 @@
 <html>
 <head>
     <title></title>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 </head>
 <body>
 {% if results %}
@@ -13,10 +14,17 @@
     {% endfor %}
 {% else %}
     <h3 class='error'>Please enter a valid UID</h3>
-    <form method="get" action="query.html">
-        Search Notecards:<input type="text" name="q" id="id_q" value="{{ query }}"/>
-        <input type="submit" value="Search"/>
-    </form>
+    <div class="container">
+        <div class="form-group">
+            <label class="control-label">Search by Animal Name</label>
+            <div class="controls">
+                <form method="get" action="results.html">
+                    <input type="text" name="q" id="id_q" value="{{ query }}"/>
+                    <input class="btn btn-primary" type="submit" value="Search"/>
+                </form>.
+            </div>
+        </div>
+    </div>
 {% endif %}
 
 </body>
