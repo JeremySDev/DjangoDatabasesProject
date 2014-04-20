@@ -12,6 +12,7 @@ from PetDispense.models import Breeds
 from PetDispense.tables import BreedsTable
 from PetDispense.models import Species
 from PetDispense.tables import SpeciesTable
+from PetDispense.forms import UserForm
 
 
 def search(request):
@@ -54,6 +55,19 @@ def index(request):
             return HttpResponseRedirect('login_failure/')
     return render_to_response("PetDispense/index.html", c)
 
+# Register a new user with a custom form, log them in, and redirect to the Warning page.
+def new_user(request):
+    if request.method == 'POST':
+        user_form = UserForm(request.POST)
+        if user_form.is_valid():
+            username = user_form.clean_username()
+            password = user_form.clean_password2()
+            user_form.save()
+            user = authenticate(username=username, password=password)
+            login(request, user)
+            return HttpResponseRedirect(reverse('agreement'))
+    user_form = UserForm()
+    return render(request, 'PetDispense/register.html', {'user_form': user_form})
 
 def selection(request):
     return render_to_response('PetDispense/selection.html')

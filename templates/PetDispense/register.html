@@ -1,0 +1,51 @@
+{% block content %}
+<!DOCTYPE html>
+<<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Agreement</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content>
+        <meta name="author" content>
+        <!-- styles -->
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    </head>
+
+    <body>
+    <div class="navbar navbar-fixed-top  navbar-inverse">
+        <div class="container">
+            <div class="navbar-inner">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
+                        class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+                <a href="{% url 'home' %}" class="navbar-brand">Pet Dispense</a>
+            </div>
+            <div class="collapse navbar-collapse pull-right">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+
+    <div class="container">
+
+      <h1><strong>Create Account</strong></h1>
+
+      <form action="" method="post">
+        <!--<table>-->
+            {{ user_form}}<!--.as_table }}-->
+        <!--</table>-->
+        {% csrf_token %}
+        <br><input type="submit" value="Register">
+      </form>
+
+    </div> <!-- /container -->
+  </body>
+</html>
+{% endblock %}
