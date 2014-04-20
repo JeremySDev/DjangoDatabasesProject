@@ -77,7 +77,7 @@
 </div>
 <!-- container -->
 <div class="container">
-    <form method="post" class="form-signin" action="{% url 'PetDispense.views.index' %}">
+    <form method="post" class="form-signin" action="{% url 'PetDispense.views.index_fail' %}">
         {% csrf_token %}
         <h2 class="form-signin-heading">Please Login</h2>
         <h5><font color="red">Invalid username and password</font></h5>
