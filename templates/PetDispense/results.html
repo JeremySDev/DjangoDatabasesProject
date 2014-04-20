@@ -1,3 +1,5 @@
+{% load render_table from django_tables2 %}
+{% block content %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,12 +8,16 @@
 </head>
 <body>
 {% if results %}
+
     {% for result in results %}
         {{ result.animal_name }}
         {{ result.breed_name }}
         {{ result.species_name }}
         {{ result.age }}
     {% endfor %}
+
+    {% render_table results %}
+
 {% else %}
     <div class="container">
         <h3 class='error'>No pet by that name found!</h3>
@@ -34,3 +40,4 @@
 
 </body>
 </html>
+{% endblock %}
