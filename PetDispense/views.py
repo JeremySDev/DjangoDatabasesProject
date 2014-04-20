@@ -52,7 +52,7 @@ def index(request):
             login(request, user)
             return HttpResponseRedirect(reverse('agreement'))
         else:
-            return HttpResponseRedirect(reverse('login_failure/'))
+            return HttpResponseRedirect(reverse('login_failure'))
     return render_to_response("PetDispense/index.html", c)
 
 # Register a new user with a custom form, log them in, and redirect to the Warning page.
