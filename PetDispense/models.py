@@ -17,7 +17,7 @@ class Breeds(models.Model):
     @property
     def species_name(self):
         return u"%s" % self.species.species_name
-    #characteristics
+        #characteristics
 
 
 class AnimalInfo(models.Model):

@@ -17,14 +17,14 @@ from PetDispense.forms import UserForm
 
 def search(request):
     results = None
-    query2 = request.GET.get('q')
+    query1 = request.GET.get('q')
     try:
-        query1 = str(query2)
+        query2 = str(query1)
     except ValueError:
-        query1 = None
+        query2 = None
         results = None
     if query1:
-        results = AnimalInfo.objects.filter(animal_name=query1)
+        results = AnimalInfo.objects.filter(animal_name=query2)
     context = RequestContext(request)
     return render_to_response('PetDispense/results.html', {"results": results}, context_instance=context)
 
@@ -33,12 +33,6 @@ def query(request):
     c = {}
     c.update(csrf(request))
     return render_to_response("PetDispense/query.html", c)
-
-
-#def index(request):
-#   c = {}
-#  c.update(csrf(request))
-# return render_to_response("PetDispense/index.html", c)
 
 
 def index(request):

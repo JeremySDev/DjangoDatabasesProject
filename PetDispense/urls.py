@@ -3,7 +3,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 #from django.views.generic import DetailView, ListView l
 from PetDispense.views import AnimalList, \
-    AgeList, OwnerList, MedInfoList, BasicInfoList, BasicInfo2List,\
+    AgeList, OwnerList, MedInfoList, BasicInfoList, BasicInfo2List, \
     ShelterSickList, YoungestList, AgeSortList, CatDogList, CountInShelterList
 
 urlpatterns = patterns('',
@@ -11,7 +11,6 @@ urlpatterns = patterns('',
                        url(r'^index/$', 'PetDispense.views.index', name=u"home"),
                        url(r'^newuser/$', 'PetDispense.views.new_user', name=u"newuser"),
                        url(r'^login_failure/$', 'PetDispense.views.login_failure', name=u"login_failure"),
-                       #url(r'^index/$', 'PetDispense.views.index_fail', name=u"login_failed"),
                        url(r'^selection/$', 'PetDispense.views.selection', name=u"selection"),
                        url(r'^about/$', 'PetDispense.views.about', name=u"about"),
                        url(r'^agreement/$', 'PetDispense.views.agreement', name=u"agreement"),
