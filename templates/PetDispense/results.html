@@ -7,6 +7,31 @@
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 </head>
 <body>
+<div class="navbar navbar-fixed-top  navbar-inverse">
+        <div class="container">
+            <div class="navbar-inner">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
+                        class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+                <a href="index.html" class="navbar-brand">Pet Dispense</a>
+            </div>
+            <div class="collapse navbar-collapse  pull-right">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
 {% if results %}
 
     {% render_table results %}
