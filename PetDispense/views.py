@@ -1,4 +1,5 @@
 from django.shortcuts import get_object_or_404, render_to_response, render
+from django.contrib.auth import authenticate, login, logout
 from django.core.context_processors import csrf
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
@@ -33,9 +34,24 @@ def query(request):
     return render_to_response("PetDispense/query.html", c)
 
 
+#def index(request):
+ #   c = {}
+  #  c.update(csrf(request))
+   # return render_to_response("PetDispense/index.html", c)
+
+
 def index(request):
     c = {}
     c.update(csrf(request))
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return HttpResponseRedirect('agreement')
+        else:
+            return HttpResponseRedirect('login_failure/')
     return render_to_response("PetDispense/index.html", c)
 
 

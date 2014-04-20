@@ -9,6 +9,8 @@ from PetDispense.views import AnimalList, \
 urlpatterns = patterns('',
                        url(r'^$', 'PetDispense.views.index', name=u"home"),
                        url(r'^index/$', 'PetDispense.views.index', name=u"home"),
+                      # url(r'^login_failure/$', 'PetDispense.views.login_failure', name=u"login_failure"),
+                       #url(r'^index/$', 'PetDispense.views.index_fail', name=u"login_failed"),
                        url(r'^selection/$', 'PetDispense.views.selection', name=u"selection"),
                        url(r'^about/$', 'PetDispense.views.about', name=u"about"),
                        url(r'^agreement/$', 'PetDispense.views.agreement', name=u"agreement"),
