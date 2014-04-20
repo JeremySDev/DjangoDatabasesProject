@@ -25,7 +25,7 @@
             </div>
             <div class="collapse navbar-collapse  pull-right">
                 <ul class="nav navbar-nav">
-                    <li>
+                    <li>contact
                         <a href="#">Home</a>
                     </li>
                     <li>
@@ -44,7 +44,7 @@
         <div class="form-group">
             <label class="control-label">Search by Animal Name</label>
             <div class="controls">
-                <form method="get" action="results.html">
+                <form method="get" action="{% url 'search' %}">
                     <input type="text" name="q" id="id_q" value="{{ query }}"/>
                     <input class="btn btn-primary" type="submit" value="Search"/>
                 </form>
@@ -53,7 +53,7 @@
         <div class="form-group">
             <label class="control-label">Search Owners</label>
             <div class="controls">
-                <form method="get" action="results.html">
+                <form method="get" action="{% url 'search' %}">
                     <input type="text" name="q" id="id_q" value="{{ query }}"/>
                     <input class="btn btn-primary" type="submit" value="Search"/>
                 </form>
