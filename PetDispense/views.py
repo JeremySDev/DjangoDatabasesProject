@@ -36,9 +36,9 @@ def query(request):
 
 
 #def index(request):
- #   c = {}
-  #  c.update(csrf(request))
-   # return render_to_response("PetDispense/index.html", c)
+#   c = {}
+#  c.update(csrf(request))
+# return render_to_response("PetDispense/index.html", c)
 
 
 def index(request):
@@ -55,6 +55,7 @@ def index(request):
             return HttpResponseRedirect(reverse('login_failure'))
     return render_to_response("PetDispense/index.html", c)
 
+
 # Register a new user with a custom form, log them in, and redirect to the Warning page.
 def new_user(request):
     if request.method == 'POST':
@@ -68,6 +69,11 @@ def new_user(request):
             return HttpResponseRedirect(reverse('agreement'))
     user_form = UserForm()
     return render(request, 'PetDispense/register.html', {'user_form': user_form})
+
+
+def login_failure(request):
+    return render_to_response('PetDispense/index_fail.html')
+
 
 def selection(request):
     return render_to_response('PetDispense/selection.html')
@@ -148,9 +154,10 @@ class MedInfoList(ListView):
     context_object_name = 'medinfo_list'
 
     def get_queryset(self):
-        return AnimalInfo.objects.raw('SELECT "PetDispense_animalinfo".animal_id, animal_name, vaccinations, has_illness, illness ' +
-                                      'FROM "PetDispense_animalinfo" ' +
-                                      'NATURAL JOIN "PetDispense_medicalinfo"')
+        return AnimalInfo.objects.raw(
+            'SELECT "PetDispense_animalinfo".animal_id, animal_name, vaccinations, has_illness, illness ' +
+            'FROM "PetDispense_animalinfo" ' +
+            'NATURAL JOIN "PetDispense_medicalinfo"')
 
 
 class BasicInfoList(ListView):
@@ -158,10 +165,11 @@ class BasicInfoList(ListView):
     context_object_name = 'basicinfo_list'
 
     def get_queryset(self):
-        return AnimalInfo.objects.raw('SELECT "PetDispense_animalinfo".animal_id, animal_name, species_name, breed_name ' +
-                                      'FROM "PetDispense_animalinfo" ' +
-                                      'NATURAL JOIN ("PetDispense_breeds" ' +
-                                      'NATURAL JOIN "PetDispense_species")')
+        return AnimalInfo.objects.raw(
+            'SELECT "PetDispense_animalinfo".animal_id, animal_name, species_name, breed_name ' +
+            'FROM "PetDispense_animalinfo" ' +
+            'NATURAL JOIN ("PetDispense_breeds" ' +
+            'NATURAL JOIN "PetDispense_species")')
 
 
 class BasicInfo2List(ListView):
@@ -179,9 +187,10 @@ class ShelterSickList(ListView):
     context_object_name = 'sheltersickinfo_list'
 
     def get_queryset(self):
-        return AnimalInfo.objects.raw('SELECT "PetDispense_animalinfo".animal_id, animal_name, in_shelter, has_illness ' +
-                                      'FROM "PetDispense_animalinfo" ' +
-                                      'NATURAL JOIN "PetDispense_medicalinfo"')
+        return AnimalInfo.objects.raw(
+            'SELECT "PetDispense_animalinfo".animal_id, animal_name, in_shelter, has_illness ' +
+            'FROM "PetDispense_animalinfo" ' +
+            'NATURAL JOIN "PetDispense_medicalinfo"')
 
 
 class YoungestList(ListView):
@@ -224,6 +233,7 @@ class CatDogList(ListView):
                                       'FROM "PetDispense_animalinfo" ' +
                                       'NATURAL JOIN "PetDispense_species" ' +
                                       'WHERE species_name = %s', [cat], [dog])
+
 
 #need new query can't really use this one because doesn't return rows
 
