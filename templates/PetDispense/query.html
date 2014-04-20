@@ -43,6 +43,7 @@
     <div class="container">
         <div class="form-group">
             <label class="control-label">Search by Animal Name</label>
+
             <div class="controls">
                 <form method="get" action="{% url 'search' %}">
                     <input type="text" name="q" id="id_q" value="{{ query }}"/>
@@ -51,6 +52,7 @@
             </div>
 
             <label class="control-label">Search Owners</label>
+
             <div class="controls">
                 <form method="get" action="{% url 'search' %}">
                     <input type="text" name="q" id="id_q" value="{{ query }}"/>

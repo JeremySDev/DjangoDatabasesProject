@@ -1,13 +1,13 @@
 {% load render_table from django_tables2 %}
 {% block content %}
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-</head>
-<body>
-<div class="navbar navbar-fixed-top  navbar-inverse">
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    </head>
+    <body>
+    <div class="navbar navbar-fixed-top  navbar-inverse">
         <div class="container">
             <div class="navbar-inner">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -32,30 +32,30 @@
         </div>
     </div>
     <br><br><br>
-{% if results %}
+    {% if results %}
+        <div class="container">
+            {% render_table results %}
+        </div>
+    {% else %}
+        <div class="container">
+            <h3 class='error'>No pet by that name found!</h3>
 
-    {% render_table results %}
+            <div class="form-group">
+                <label class="control-label">Search by Animal Name</label>
 
-{% else %}
-    <div class="container">
-        <h3 class='error'>No pet by that name found!</h3>
-
-        <div class="form-group">
-            <label class="control-label">Search by Animal Name</label>
-
-            <div class="controls">
-                <form method="get" action="results.html">
-                    <input type="text" name="q" id="id_q" value="{{ query }}"/>
-                    <br>
-                    <br>
-                    <input class="btn btn-primary" type="submit" value="Search"/>
-                </form>
-                .
+                <div class="controls">
+                    <form method="get" action="results.html">
+                        <input type="text" name="q" id="id_q" value="{{ query }}"/>
+                        <br>
+                        <br>
+                        <input class="btn btn-primary" type="submit" value="Search"/>
+                    </form>
+                    .
+                </div>
             </div>
         </div>
-    </div>
-{% endif %}
+    {% endif %}
 
-</body>
-</html>
+    </body>
+    </html>
 {% endblock %}
