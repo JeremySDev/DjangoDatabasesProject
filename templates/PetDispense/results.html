@@ -9,13 +9,6 @@
 <body>
 {% if results %}
 
-    {% for result in results %}
-        {{ result.animal_name }}
-        {{ result.breed_name }}
-        {{ result.species_name }}
-        {{ result.age }}
-    {% endfor %}
-
     {% render_table results %}
 
 {% else %}
