@@ -14,7 +14,7 @@
     {% endfor %}
 {% else %}
     <div class="container">
-        <h3 class='error'>No pet by that name found</h3>
+        <h3 class='error'>No pet by that name found!</h3>
 
         <div class="form-group">
             <label class="control-label">Search by Animal Name</label>
@@ -22,6 +22,7 @@
             <div class="controls">
                 <form method="get" action="results.html">
                     <input type="text" name="q" id="id_q" value="{{ query }}"/>
+                    <br>
                     <input class="btn btn-primary" type="submit" value="Search"/>
                 </form>
                 .
