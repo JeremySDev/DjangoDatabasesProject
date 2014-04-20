@@ -50,7 +50,7 @@ def index(request):
         user = authenticate(username=username, password=password)
         if user is not None:
             login(request, user)
-            return HttpResponseRedirect('agreement')
+            return HttpResponseRedirect(reverse('agreement'))
         else:
             return HttpResponseRedirect('login_failure/')
     return render_to_response("PetDispense/index.html", c)
