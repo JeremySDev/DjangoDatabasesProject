@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.conf import settings
 from django.conf.urls.static import static
-#from django.views.generic import DetailView, ListView
+#from django.views.generic import DetailView, ListView l
 from PetDispense.views import AnimalList, \
     AgeList, OwnerList, MedInfoList, BasicInfoList, BasicInfo2List,\
     ShelterSickList, YoungestList, AgeSortList, CatDogList, CountInShelterList
