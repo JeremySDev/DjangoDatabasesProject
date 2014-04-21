@@ -39,7 +39,7 @@
             <label class="control-label">Search by Animal Name</label>
 
             <div class="controls">
-                <form method="get" action="{% url 'searchAnimals' %}">
+                <form method="get" action="{% url 'search_animals' %}">
                     <input type="text" name="q" id="id_q" value="{{ query }}"/>
                     <input class="btn btn-primary" type="submit" value="Search"/>
                 </form>
@@ -48,7 +48,7 @@
             <label class="control-label">Search Owners by Last Name</label>
 
             <div class="controls">
-                <form method="get" action="{% url 'searchOwners' %}">
+                <form method="get" action="{% url 'search_owners' %}">
                     <input type="text" name="q" id="id_q" value="{{ query }}"/>
                     <input class="btn btn-primary" type="submit" value="Search"/>
                 </form>

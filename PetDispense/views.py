@@ -26,7 +26,7 @@ def search_animals(request):
     if query1:
         results_animal = AnimalInfo.objects.filter(animal_name=query2)
     context = RequestContext(request)
-    return render_to_response('PetDispense/results.html', {"resultsAnimals": results_animal}, context_instance=context)
+    return render_to_response('PetDispense/results.html', {"results_animals": results_animal}, context_instance=context)
 
 
 def search_owners(request):
@@ -40,7 +40,7 @@ def search_owners(request):
     if query1:
         results_owner = Owners.objects.filter(owner_lastname=query2)
     context = RequestContext(request)
-    return render_to_response('PetDispense/results.html', {"resultsOwners": results_owner}, context_instance=context)
+    return render_to_response('PetDispense/results.html', {"results_owners": results_owner}, context_instance=context)
 
 
 def query(request):
