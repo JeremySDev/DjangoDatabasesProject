@@ -21,11 +21,12 @@
                     <li><a href="{% url 'home' %}">Home</a></li>
                     <li><a href="{% url 'about' %}">About</a></li>
                     <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
             </div>
         </div>
     </div>
     <br><br><br>
-    {% if results %}
+    {% if results_animal %}
         <div class="container">
             <h2>Animal Search</h2>
             <table>
@@ -35,12 +36,33 @@
                     <th>Species</th>
                     <th>Age</th>
                 </tr>
-                {% for an in results %}
+                {% for an in results_animal %}
                     <tr>
                         <td>{{ an.animal_name }}</td>
                         <td>{{ an.breed_name }}</td>
                         <td>{{ an.species_name }}</td>
                         <td>{{ an.age }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    {% else if results_owner %}
+        <div class="container">
+            <h2>Owner Search</h2>
+            <table>
+                <tr>
+                    <th>Lastname</th>
+                    <th>Firstname</th>
+                    <th>Address</th>
+                    <th>Phone#</th>
+                </tr>
+                {% for an in results_owner %}
+                    <tr>
+                        <td>{{ an.owner_lastname }}</td>
+                        <td>{{ an.owner_firstname }}</td>
+                        <td>{{ an.owner_address }}</td>
+                        <td>{{ an.owner_phone }}</td>
+                        <td>{{ an.animal_id.animal_name }}</td>
                     </tr>
                 {% endfor %}
             </table>

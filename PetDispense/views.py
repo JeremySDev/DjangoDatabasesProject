@@ -6,7 +6,7 @@ from django.core.urlresolvers import reverse
 from django.template import RequestContext
 from django.views.generic import ListView
 from django_tables2 import RequestConfig
-from PetDispense.models import AnimalInfo
+from PetDispense.models import AnimalInfo, Owners
 from PetDispense.tables import AnimalInfoTable
 from PetDispense.models import Breeds
 from PetDispense.tables import BreedsTable
@@ -15,32 +15,33 @@ from PetDispense.tables import SpeciesTable
 from PetDispense.forms import UserForm
 
 
-def searchAnimals(request):
-    results = None
+def search_animals(request):
+    results_animal = None
     query1 = request.GET.get('q')
     try:
         query2 = str(query1)
     except ValueError:
         query2 = None
-        results = None
+        results_animal = None
     if query1:
-        results = AnimalInfo.objects.filter(animal_name=query2)
+        results_animal = AnimalInfo.objects.filter(animal_name=query2)
     context = RequestContext(request)
-    return render_to_response('PetDispense/results.html', {"results": results}, context_instance=context)
+    return render_to_response('PetDispense/results.html', {"resultsAnimals": results_animal}, context_instance=context)
 
 
-def searchOwners(request):
-    results = None
+def search_owners(request):
+    results_owner = None
     query1 = request.GET.get('q')
     try:
         query2 = str(query1)
     except ValueError:
         query2 = None
-        results = None
+        results_owner = None
     if query1:
-        results = AnimalInfo.objects.filter(animal_name=query2)
+        results_owner = Owners.objects.filter(owner_lastname=query2)
     context = RequestContext(request)
-    return render_to_response('PetDispense/results.html', {"results": results}, context_instance=context)
+    return render_to_response('PetDispense/results.html', {"resultsOwners": results_owner}, context_instance=context)
+
 
 def query(request):
     c = {}
