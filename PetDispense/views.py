@@ -15,7 +15,7 @@ from PetDispense.tables import SpeciesTable
 from PetDispense.forms import UserForm
 
 
-def search(request):
+def searchAnimals(request):
     results = None
     query1 = request.GET.get('q')
     try:
@@ -29,10 +29,25 @@ def search(request):
     return render_to_response('PetDispense/results.html', {"results": results}, context_instance=context)
 
 
+def searchOwners(request):
+    results = None
+    query1 = request.GET.get('q')
+    try:
+        query2 = str(query1)
+    except ValueError:
+        query2 = None
+        results = None
+    if query1:
+        results = AnimalInfo.objects.filter(animal_name=query2)
+    context = RequestContext(request)
+    return render_to_response('PetDispense/results.html', {"results": results}, context_instance=context)
+
 def query(request):
     c = {}
     c.update(csrf(request))
     return render_to_response("PetDispense/query.html", c)
+
+############Login#######################################################################################################
 
 
 def index(request):
@@ -67,6 +82,8 @@ def new_user(request):
 
 def login_failure(request):
     return render_to_response('PetDispense/index_fail.html')
+
+###############Webpages#################################################################################################
 
 
 def selection(request):
@@ -115,6 +132,8 @@ def species(request):
     table = SpeciesTable(Species.objects.all())
     RequestConfig(request).configure(table)
     return render(request, 'PetDispense/species.html', {'table': table})
+
+###############List Views###############################################################################################
 
 
 class AnimalList(ListView):

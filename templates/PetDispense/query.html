@@ -25,15 +25,9 @@
             </div>
             <div class="collapse navbar-collapse  pull-right">
                 <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -45,7 +39,7 @@
             <label class="control-label">Search by Animal Name</label>
 
             <div class="controls">
-                <form method="get" action="{% url 'search' %}">
+                <form method="get" action="{% url 'searchAnimals' %}">
                     <input type="text" name="q" id="id_q" value="{{ query }}"/>
                     <input class="btn btn-primary" type="submit" value="Search"/>
                 </form>
@@ -54,7 +48,7 @@
             <label class="control-label">Search Owners</label>
 
             <div class="controls">
-                <form method="get" action="{% url 'search' %}">
+                <form method="get" action="{% url 'searchOwners' %}">
                     <input type="text" name="q" id="id_q" value="{{ query }}"/>
                     <input class="btn btn-primary" type="submit" value="Search"/>
                 </form>
