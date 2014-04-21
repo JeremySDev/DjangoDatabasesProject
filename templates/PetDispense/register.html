@@ -36,17 +36,17 @@
 
     <div class="container">
 
-         <center><h1><strong>Create Account</strong></h1></center>
-
-        <form action="" method="post">
-            {% csrf_token %}
+        <center><h1><strong>Create Account</strong></h1></center>
+        <center>
+            <form action="" method="post">
+                {% csrf_token %}
 
                 {{ user_form }}
 
-            <br>
-            <input type="submit" value="Register">
-        </form>
-
+                <br>
+                <input type="submit" value="Register">
+            </form>
+        </center>
     </div>
     <!-- /container -->
     </body>
