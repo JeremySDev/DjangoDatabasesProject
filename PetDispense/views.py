@@ -33,13 +33,13 @@ def search_animals(request):
 def search_owners(request):
     results_owner = None
     query1 = request.GET.get('q')
-    try:
-        query2 = str(query1)
-    except ValueError:
-        query2 = None
-        results_owner = None
+    #try:
+    #    query2 = str(query1)
+    #except ValueError:
+    #    query2 = None
+    #    results_owner = None
     if query1:
-        results_owner = Owners.objects.filter(owner_lastname=query2)
+        results_owner = Owners.objects.filter(owner_lastname=query1)
     context = RequestContext(request)
     return render_to_response('PetDispense/results.html', {"results_owners": results_owner}, context_instance=context)
 
