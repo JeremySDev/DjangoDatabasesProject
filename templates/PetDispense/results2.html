@@ -1,0 +1,73 @@
+{% load render_table from django_tables2 %}
+{% block content %}
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    </head>
+    <body>
+    <div class="navbar navbar-fixed-top  navbar-inverse">
+        <div class="container">
+            <div class="navbar-inner">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
+                        class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+                <a href="index.html" class="navbar-brand">Pet Dispense</a>
+            </div>
+            <div class="collapse navbar-collapse  pull-right">
+                <ul class="nav navbar-nav">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    {% if results_owner %}
+        <div class="container">
+            <h2>Owner Search</h2>
+            <table>
+                <tr>
+                    <th>Lastname</th>
+                    <th>Firstname</th>
+                    <th>Address</th>
+                    <th>Phone#</th>
+                    <th>Animal Name</th>
+                </tr>
+                {% for an in results_owner %}
+                    <tr>
+                        <td>{{ an.owner_lastname }}</td>
+                        <td>{{ an.owner_firstname }}</td>
+                        <td>{{ an.owner_address }}</td>
+                        <td>{{ an.owner_phone }}</td>
+                        <td>{{ an.animal_id.animal_name }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    {% else %}
+        <div class="container">
+            <h3 class='error'>No pet by that name found!</h3>
+
+            <div class="form-group">
+                <label class="control-label">Search by Animal Name</label>
+
+                <div class="controls">
+                    <form method="get" action="results.html">
+                        <input type="text" name="q" id="id_q" value="{{ query }}"/>
+                        <br>
+                        <br>
+                        <input class="btn btn-primary" type="submit" value="Search"/>
+                    </form>
+                    .
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+    </body>
+    </html>
+{% endblock %}
