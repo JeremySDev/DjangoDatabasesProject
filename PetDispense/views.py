@@ -23,6 +23,7 @@ def search_animals(request):
     except ValueError:
         query2 = None
         results_animal = None
+        raise AssertionError("foo")
     if query1:
         results_animal = AnimalInfo.objects.filter(animal_name=query2)
     context = RequestContext(request)
