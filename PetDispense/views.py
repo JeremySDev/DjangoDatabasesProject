@@ -18,14 +18,13 @@ from PetDispense.forms import UserForm
 def search_animals(request):
     results_animal = None
     query1 = request.GET.get('q')
-    #try:
-     #   query2 = str(query1)
-    #except ValueError:
-     #   query2 = None
-      #  results_animal = None
-       # raise AssertionError("foo")
+    try:
+        query2 = str(query1)
+    except ValueError:
+        query2 = None
+        results_animal = None
     if query1:
-        results_animal = AnimalInfo.objects.filter(animal_name=query1)
+        results_animal = AnimalInfo.objects.filter(animal_name=query2)
     context = RequestContext(request)
     return render_to_response('PetDispense/results.html', {"results_animals": results_animal}, context_instance=context)
 
@@ -33,21 +32,22 @@ def search_animals(request):
 def search_owners(request):
     results_owner = None
     query1 = request.GET.get('q')
-    #try:
-    #    query2 = str(query1)
-    #except ValueError:
-    #    query2 = None
-    #    results_owner = None
+    try:
+        query2 = str(query1)
+    except ValueError:
+        query2 = None
+        results_owner = None
     if query1:
-        results_owner = Owners.objects.filter(owner_lastname=query1)
+        results_owner = Owners.objects.filter(owner_lastname=query2)
     context = RequestContext(request)
-    return render_to_response('PetDispense/results.html', {"results_owners": results_owner}, context_instance=context)
+    return render_to_response('PetDispense/results2.html', {"results_owners": results_owner}, context_instance=context)
 
 
 def query(request):
     c = {}
     c.update(csrf(request))
     return render_to_response("PetDispense/query.html", c)
+
 
 ############Login#######################################################################################################
 
@@ -84,6 +84,7 @@ def new_user(request):
 
 def login_failure(request):
     return render_to_response('PetDispense/index_fail.html')
+
 
 ###############Webpages#################################################################################################
 
@@ -134,6 +135,7 @@ def species(request):
     table = SpeciesTable(Species.objects.all())
     RequestConfig(request).configure(table)
     return render(request, 'PetDispense/species.html', {'table': table})
+
 
 ###############List Views###############################################################################################
 
