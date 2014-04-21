@@ -18,14 +18,14 @@ from PetDispense.forms import UserForm
 def search_animals(request):
     results_animal = None
     query1 = request.GET.get('q')
-    try:
-        query2 = str(query1)
-    except ValueError:
-        query2 = None
-        results_animal = None
-        raise AssertionError("foo")
+    #try:
+     #   query2 = str(query1)
+    #except ValueError:
+     #   query2 = None
+      #  results_animal = None
+       # raise AssertionError("foo")
     if query1:
-        results_animal = AnimalInfo.objects.filter(animal_name=query2)
+        results_animal = AnimalInfo.objects.filter(animal_name=query1)
     context = RequestContext(request)
     return render_to_response('PetDispense/results.html', {"results_animals": results_animal}, context_instance=context)
 
