@@ -46,33 +46,12 @@
                 {% endfor %}
             </table>
         </div>
-    {% else if results_owner %}
-        <div class="container">
-            <h2>Owner Search</h2>
-            <table>
-                <tr>
-                    <th>Lastname</th>
-                    <th>Firstname</th>
-                    <th>Address</th>
-                    <th>Phone#</th>
-                </tr>
-                {% for an in results_owner %}
-                    <tr>
-                        <td>{{ an.owner_lastname }}</td>
-                        <td>{{ an.owner_firstname }}</td>
-                        <td>{{ an.owner_address }}</td>
-                        <td>{{ an.owner_phone }}</td>
-                        <td>{{ an.animal_id.animal_name }}</td>
-                    </tr>
-                {% endfor %}
-            </table>
-        </div>
     {% else %}
         <div class="container">
             <h3 class='error'>No pet by that name found!</h3>
 
             <div class="form-group">
-                <label class="control-label">Search Owners by Last Name</label>
+                <label class="control-label">Search by Animal Name</label>
 
                 <div class="controls">
                     <form method="get" action="results.html">
