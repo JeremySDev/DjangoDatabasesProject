@@ -8,11 +8,8 @@ class PostForm(forms.Form):
 
 
 class UserForm(UserCreationForm):
-    email = forms.EmailField()
-
     def save(self, commit=True):
         profile = super(UserForm, self).save(commit=False)
-        profile.email = self.cleaned_data['email']
         if commit:
             profile.save()
         return profile
