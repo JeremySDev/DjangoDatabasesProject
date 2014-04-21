@@ -54,7 +54,7 @@
                 <label class="control-label">Search by Animal Name</label>
 
                 <div class="controls">
-                    <form method="get" action="results.html">
+                    <form method="get" action="{% url 'search_animals' %}">
                         <input type="text" name="q" id="id_q" value="{{ query }}"/>
                         <br>
                         <br>
