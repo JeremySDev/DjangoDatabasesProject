@@ -26,7 +26,6 @@
         </div>
     </div>
     <br><br><br>
-    {% if results %}
         <div class="container">
             <h2>Animal Search</h2>
             <table>
@@ -46,25 +45,7 @@
                 {% endfor %}
             </table>
         </div>
-    {% else %}
-        <div class="container">
-            <h3 class='error'>No pet by that name found!</h3>
 
-            <div class="form-group">
-                <label class="control-label">Search by Animal Name</label>
-
-                <div class="controls">
-                    <form method="get" action="{% url 'search' %}">
-                        <input type="text" name="q" id="id_q" value="{{ query }}"/>
-                        <br>
-                        <br>
-                        <input class="btn btn-primary" type="submit" value="Search"/>
-                    </form>
-                    .
-                </div>
-            </div>
-        </div>
-    {% endif %}
 
     </body>
     </html>
