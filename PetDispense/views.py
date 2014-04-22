@@ -23,8 +23,9 @@ def search_animals(request):
     except ValueError:
         query2 = None
         results_animal = None
-    if query1:
-        results_animal = AnimalInfo.objects.filter(animal_name=query2)
+    if query2:
+        if query1:
+            results_animal = AnimalInfo.objects.filter(animal_name=query2)
     context = RequestContext(request)
     return render_to_response('PetDispense/results.html', {"results_animals": results_animal}, context_instance=context)
 
@@ -37,8 +38,9 @@ def search_owners(request):
     except ValueError:
         query2 = None
         results_owner = None
-    if query1:
-        results_owner = Owners.objects.filter(owner_lastname=query2)
+    if query2:
+        if query1:
+            results_owner = Owners.objects.filter(owner_lastname=query2)
     context = RequestContext(request)
     return render_to_response('PetDispense/results2.html', {"results_owners": results_owner}, context_instance=context)
 
