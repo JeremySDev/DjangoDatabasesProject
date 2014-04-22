@@ -31,7 +31,7 @@ def search_animals(request):
 
 def search_owners(request):
     results_owner = None
-    query1 = request.GET.get('q')
+    query1 = request.GET.get('qt')
     try:
         query2 = str(query1)
     except ValueError:
