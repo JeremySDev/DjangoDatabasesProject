@@ -15,19 +15,17 @@ from PetDispense.tables import SpeciesTable
 from PetDispense.forms import UserForm
 
 
-def search_animals(request):
-    results_animal = None
-    query1 = request.GET.get('q')
+def search(request):
+    query = request.GET.get('q')
     try:
-        query2 = str(query1)
+        query = int(query)
     except ValueError:
-        query2 = None
-        results_animal = None
-    if query2:
-        if query1:
-            results_animal = AnimalInfo.objects.filter(animal_name=query2)
+        query = None
+        results = None
+    if query:
+        results = AnimalInfo.objects.get(animal_name=query)
     context = RequestContext(request)
-    return render_to_response('PetDispense/results.html', {"results_animals": results_animal}, context_instance=context)
+    return render_to_response('PetDispense/results.html', {"results": results}, context_instance=context)
 
 
 def search_owners(request):

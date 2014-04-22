@@ -26,7 +26,7 @@
         </div>
     </div>
     <br><br><br>
-    {% if results_animal %}
+    {% if results %}
         <div class="container">
             <h2>Animal Search</h2>
             <table>
@@ -36,7 +36,7 @@
                     <th>Species</th>
                     <th>Age</th>
                 </tr>
-                {% for an in results_animal %}
+                {% for an in results %}
                     <tr>
                         <td>{{ an.animal_name }}</td>
                         <td>{{ an.breed_name }}</td>
@@ -54,7 +54,7 @@
                 <label class="control-label">Search by Animal Name</label>
 
                 <div class="controls">
-                    <form method="get" action="{% url 'search_animals' %}">
+                    <form method="get" action="{% url 'search' %}">
                         <input type="text" name="q" id="id_q" value="{{ query }}"/>
                         <br>
                         <br>
