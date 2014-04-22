@@ -35,19 +35,16 @@
     <br><br><br>
 
     <div class="container">
-        <div class="form-group">
-            <label class="control-label">Search by Animal Name</label>
-
+        <div class="form-group">          
             <div class="controls">
                 <form method="get" action="{% url 'search_animals' %}">
+                    <h4>Search by Animal Name</h4>
                     <input type="text" name="q" id="id_q" value="{{ query }}"/>
                     <h4>Search Owners by Last Name</h4>
                     <input type="text" name="qt" id="id_q" value="{{ query }}"/>
                     <input class="btn btn-primary" type="submit" value="Search"/>
                 </form>
             </div>
-
-
         </div>
         <a href="{% url 'selection' %}">Or Look at Other Information</a>
     </div>
