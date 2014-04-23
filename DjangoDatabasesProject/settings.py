@@ -19,7 +19,7 @@ DATABASES = {
     'default': dj_database_url.config(),
 }
 
-# Hosts/domain names that are valid for this site; required if DEBUG is False
+# Hosts/domain names that are valid for this site required if DEBUG is False
 # See https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = ['petdispense.herokuapp.com']  # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
