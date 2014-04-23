@@ -28,18 +28,16 @@
     <br><br><br>
     {% if results %}
         <div class="container">
-
             <h2>Animal Search</h2>
             <table>
                 <thead>
                 <tr>
-                    <th class="animal_id orderable sortable"><a href="?q=ben&amp;sort=animal_id">Animal Id</a></th>
-                    <th class="animal_name orderable sortable"><a href="?q=ben&amp;sort=animal_name">Animal Name</a></th>
-                    <th class="orderable sortable species"><a href="?q=ben&amp;sort=species">Species</a></th>
-                    <th class="breed orderable sortable"><a href="?q=ben&amp;sort=breed">Breed</a></th>
-                    <th class="birth_date orderable sortable"><a href="?q=ben&amp;sort=birth_date">Birth Date</a></th>
-                    <th class="in_shelter orderable sortable"><a href="?q=ben&amp;sort=in_shelter">In Shelter</a>
-                    </th>
+                    <th class="animal_id orderable sortable">Animal Id</th>
+                    <th class="animal_name orderable sortable">Animal Name</th>
+                    <th class="orderable sortable species">Species</th>
+                    <th class="breed orderable sortable">Breed</th>
+                    <th class="birth_date orderable sortable">Birth Date</th>
+                    <th class="in_shelter orderable sortable">In Shelter</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -56,8 +54,8 @@
                 {% endfor %}
                 </tbody>
             </table>
-
-            <div class="table-container">
+        </div>
+        <div class="table-container">
                 <table class="paleblue">
                     <thead>&#32;
                     <tr>&#32;
@@ -100,7 +98,6 @@
                     <li class="cardinality">1 animal info</li>
                 </ul>
             </div>
-        </div>
     {% else %}
         <div class="container">
             <h3 class='error'>No pet by that name found!</h3>
