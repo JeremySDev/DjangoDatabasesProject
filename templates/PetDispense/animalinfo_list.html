@@ -58,14 +58,18 @@
     <!--Query1 -->
     {% if owner_list %}
         <h2>Owners List</h2>
-        <table>
+        <table class="table">
+            <thead>
             <tr>
                 <th>Animal Name</th>
                 <th>Breed</th>
                 <th>Species</th>
                 <th>Age</th>
             </tr>
+            </thead>
+            <tbody>
             {% for an in owner_list %}
+
                 <tr>
                     <td>{{ an.animal_name }}</td>
                     <td>{{ an.breed_name }}</td>
@@ -115,6 +119,7 @@
                     <td>{{ an.age }}</td>
                 </tr>
             {% endfor %}
+            </tbody>
         </table>
     {% endif %}
     <!--Query4 -->
