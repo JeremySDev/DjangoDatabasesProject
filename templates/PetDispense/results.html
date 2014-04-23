@@ -28,14 +28,15 @@
     <br><br><br>
     {% if results %}
         <div class="container">
+
             <h2>Animal Search</h2>
-            <table>
+            <table class="table">
                 <thead>
                 <tr>
-                    <th>Animal Id</th>
                     <th>Animal Name</th>
-                    <th>Species</th>
                     <th>Breed</th>
+                    <th>Species</th>
+                    <th>Age</th>
                     <th>Birth Date</th>
                     <th>In Shelter</th>
                 </tr>
@@ -43,7 +44,6 @@
                 <tbody>
                 {% for an in results %}
                     <tr>
-                        <td>{{ an.animal_id }}</td>
                         <td>{{ an.animal_name }}</td>
                         <td>{{ an.breed_name }}</td>
                         <td>{{ an.species_name }}</td>
@@ -55,7 +55,6 @@
                 </tbody>
             </table>
         </div>
-
     {% else %}
         <div class="container">
             <h3 class='error'>No pet by that name found!</h3>
