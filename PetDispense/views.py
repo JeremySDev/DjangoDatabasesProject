@@ -163,7 +163,7 @@ def owner_list(request):
         Owners.objects.raw('SELECT "PetDispense_animalinfo".animal_id, animal_name, owner_firstname ' +
                            'FROM "PetDispense_animalinfo" ' +
                            'NATURAL JOIN "PetDispense_owners"' +
-                           'GROUP BY owner_firstname'))
+                           'ORDER BY owner_firstname'))
     RequestConfig(request).configure(owner_table)
     return render(request, 'PetDispense/animalinfo_list.html', {'ownerTable': owner_table})
 
