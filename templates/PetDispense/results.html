@@ -30,25 +30,18 @@
         <div class="container">
 
             <h2>Animal Search</h2>
-            <table class="paleblue">
-                <thead>&#32;
-                <tr>&#32;
+            <table>
+                <thead>
+                <tr>
                     <th class="animal_id orderable sortable"><a href="?q=ben&amp;sort=animal_id">Animal Id</a></th>
-                    &#32;
-                    <th class="animal_name orderable sortable"><a href="?q=ben&amp;sort=animal_name">Animal Name</a>
-                    </th>
-                    &#32;
+                    <th class="animal_name orderable sortable"><a href="?q=ben&amp;sort=animal_name">Animal Name</a></th>
                     <th class="orderable sortable species"><a href="?q=ben&amp;sort=species">Species</a></th>
-                    &#32;
                     <th class="breed orderable sortable"><a href="?q=ben&amp;sort=breed">Breed</a></th>
-                    &#32;
-                    <th class="birth_date orderable sortable"><a href="?q=ben&amp;sort=birth_date">Birth Date</a>
-                    </th>
-                    &#32;
+                    <th class="birth_date orderable sortable"><a href="?q=ben&amp;sort=birth_date">Birth Date</a></th>
                     <th class="in_shelter orderable sortable"><a href="?q=ben&amp;sort=in_shelter">In Shelter</a>
                     </th>
-                    &#32;</tr>
-                &#32;</thead>
+                </tr>
+                </thead>
                 <tbody>
                 {% for an in results %}
                     <tr>
