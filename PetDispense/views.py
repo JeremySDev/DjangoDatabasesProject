@@ -16,14 +16,15 @@ from PetDispense.forms import UserForm
 
 
 def search(request):
-    query = request.GET.get('q')
+    global results
+    query1 = request.GET.get('q')
     try:
-        query = int(query)
+        query2 = str(query1)
     except ValueError:
-        query = None
+        query2 = None
         results = None
-    if query:
-        results = AnimalInfo.objects.get(animal_name=query)
+    if query2:
+        results = AnimalInfo.objects.get(animal_name=query2)
     context = RequestContext(request)
     return render_to_response('PetDispense/results.html', {"results": results}, context_instance=context)
 
