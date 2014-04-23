@@ -39,5 +39,5 @@ class OwnersTable(tables.Table):
 
     class Meta:
         model = Owners
-        sequence = ("animal_id", "animal_name", "species_name", "breed_name", "birth_date", "Owner Firstname", "Owner Lastname")
+        sequence = ("animal_name", "species_name", "breed_name", "birth_date", "Owner Firstname", "Owner Lastname")
         exclude = ("species", "breed")
