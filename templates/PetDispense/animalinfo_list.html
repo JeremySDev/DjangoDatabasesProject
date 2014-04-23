@@ -56,25 +56,8 @@
         </table>
     {% endif %}
     <!--Query1 -->
-    {% if owner_list %}
-        <h2>Owners List</h2>
-        <table>
-            <tr>
-                <th>Animal Name</th>
-                <th>Breed</th>
-                <th>Species</th>
-                <th>Age</th>
-            </tr>
-            {% for an in owner_list %}
-                <tr>
-                    <td>{{ an.animal_name }}</td>
-                    <td>{{ an.breed_name }}</td>
-                    <td>{{ an.species_name }}</td>
-                    <td>{{ an.age }}</td>
-                    <td>{{ an.owner_firstname }}</td>
-                </tr>
-            {% endfor %}
-        </table>
+    {% if owner_table %}
+        {% render_table owner_table %}
     {% endif %}
     <!--Query2 -->
     {% if medinfo_list %}

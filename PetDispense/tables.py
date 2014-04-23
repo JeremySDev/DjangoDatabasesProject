@@ -1,5 +1,5 @@
 import django_tables2 as tables
-from PetDispense.models import Species, Breeds, AnimalInfo
+from PetDispense.models import Species, Breeds, AnimalInfo, Owners
 
 
 class SpeciesTable(tables.Table):
@@ -29,4 +29,15 @@ class AnimalInfoTable(tables.Table):
     class Meta:
         model = AnimalInfo
         sequence = ("animal_id", "animal_name", "species_name", "breed_name", "birth_date", "in_shelter")
+        exclude = ("species", "breed")
+
+
+class OwnersTable(tables.Table):
+    animal_name = tables.Column(verbose_name="animal name")
+    species_name = tables.Column(verbose_name="species name")
+    breed_name = tables.Column(verbose_name="breed name")
+
+    class Meta:
+        model = Owners
+        sequence = ("animal_id", "animal_name", "species_name", "breed_name", "birth_date", "Owner Firstname", "Owner Lastname")
         exclude = ("species", "breed")

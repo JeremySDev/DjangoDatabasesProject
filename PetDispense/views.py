@@ -12,6 +12,7 @@ from PetDispense.models import Breeds
 from PetDispense.tables import BreedsTable
 from PetDispense.models import Species
 from PetDispense.tables import SpeciesTable
+from PetDispense.tables import OwnersTable
 from PetDispense.forms import UserForm
 
 
@@ -157,6 +158,15 @@ class AgeList(ListView):
         return AnimalInfo.objects.order_by('-birth_date')
 
 
+def owner_list(request):
+    owner_table = OwnersTable(
+        Owners.objects.raw('SELECT "PetDispense_animalinfo".animal_id, animal_name, owner_firstname ' +
+                           'FROM "PetDispense_animalinfo" ' +
+                           'NATURAL JOIN "PetDispense_owners"'))
+    RequestConfig(request).configure(owner_table)
+    return render(request, 'PetDispense/animalinfo_list.html', {'ownerTable': owner_table})
+
+
 class OwnerList(ListView):
     template_name = 'PetDispense/animalinfo_list.html'
     context_object_name = 'owner_list'
@@ -165,7 +175,6 @@ class OwnerList(ListView):
         return AnimalInfo.objects.raw('SELECT "PetDispense_animalinfo".animal_id, animal_name, owner_firstname ' +
                                       'FROM "PetDispense_animalinfo" ' +
                                       'NATURAL JOIN "PetDispense_owners"')
-
 
 class MedInfoList(ListView):
     template_name = 'PetDispense/animalinfo_list.html'
