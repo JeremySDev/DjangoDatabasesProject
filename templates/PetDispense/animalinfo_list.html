@@ -38,13 +38,16 @@
     <!--Query0 -->
     {% if not_in_shelter_list %}
         <h2>Not in Shelter</h2>
-        <table>
+        <table class="table">
+            <thead>
             <tr>
                 <th>Animal Name</th>
                 <th>Breed</th>
                 <th>Species</th>
                 <th>Age</th>
             </tr>
+            </thead>
+            <tbody>
             {% for an in not_in_shelter_list %}
                 <tr>
                     <td>{{ an.animal_name }}</td>
@@ -53,6 +56,7 @@
                     <td>{{ an.age }}</td>
                 </tr>
             {% endfor %}
+            </tbody>
         </table>
     {% endif %}
     <!--Query1 -->
@@ -78,19 +82,23 @@
                     <td>{{ an.age }}</td>
                 </tr>
             {% endfor %}
+
             </tbody>
         </table>
     {% endif %}
     <!--Query2 -->
     {% if medinfo_list %}
         <h2>Medical Info</h2>
-        <table>
+        <table class="table">
+            <thead>
             <tr>
                 <th>Animal Name</th>
                 <th>Breed</th>
                 <th>Species</th>
                 <th>Age</th>
             </tr>
+            </thead>
+            <tbody>
             {% for an in medinfo_list %}
                 <tr>
                     <td>{{ an.animal_name }}</td>
@@ -100,18 +108,22 @@
 
                 </tr>
             {% endfor %}
+            </tbody>
         </table>
     {% endif %}
     <!--Query3 -->
     {% if basicinfo_list %}
         <h2>Basic Info</h2>
-        <table>
+        <table class="table">
+            <thead>
             <tr>
                 <th>Animal Name</th>
                 <th>Breed</th>
                 <th>Species</th>
                 <th>Age</th>
             </tr>
+            </thead>
+            <tbody>
             {% for an in basicinfo_list %}
                 <tr>
                     <td>{{ an.animal_name }}</td>
@@ -120,18 +132,22 @@
                     <td>{{ an.age }}</td>
                 </tr>
             {% endfor %}
+            </tbody>
         </table>
     {% endif %}
     <!--Query4 -->
     {% if basicinfo2_list %}
         <h2>Basic Info2</h2>
-        <table>
+        <table class="table">
+            <thead>
             <tr>
                 <th>Animal Name</th>
                 <th>Breed</th>
                 <th>Species</th>
                 <th>Age</th>
             </tr>
+            </thead>
+            <tbody>
             {% for an in basicinfo2_list %}
                 <tr>
                     <td>{{ an.animal_name }}</td>
@@ -140,18 +156,22 @@
                     <td>{{ an.age }}</td>
                 </tr>
             {% endfor %}
+            </tbody>
         </table>
     {% endif %}
     <!--Query5 -->
     {% if sheltersickinfo_list %}
         <h2>Sick in Shelter</h2>
-        <table>
+        <table class="table">
+            <thead>
             <tr>
                 <th>Animal Name</th>
                 <th>Breed</th>
                 <th>Species</th>
                 <th>Age</th>
             </tr>
+            </thead>
+            <tbody>
             {% for an in sheltersickinfo_list %}
                 <tr>
                     <td>{{ an.animal_name }}</td>
@@ -160,18 +180,22 @@
                     <td>{{ an.age }}</td>
                 </tr>
             {% endfor %}
+            </tbody>
         </table>
     {% endif %}
     <!--Query6 -->
     {% if youngest_list %}
         <h2>Youngest</h2>
-        <table>
+        <table class="table">
+            <thead>
             <tr>
                 <th>Animal Name</th>
                 <th>Breed</th>
                 <th>Species</th>
                 <th>Age</th>
             </tr>
+            </thead>
+            <tbody>
             {% for an in youngest_list %}
                 <tr>
                     <td>{{ an.animal_name }}</td>
@@ -180,18 +204,22 @@
                     <td>{{ an.age }}</td>
                 </tr>
             {% endfor %}
+            </tbody>
         </table>
     {% endif %}
     <!--Query7 -->
     {% if agesortinfo_list %}
         <h2>Sort by Age</h2>
-        <table>
+        <table class="table">
+            <thead>
             <tr>
                 <th>Animal Name</th>
                 <th>Breed</th>
                 <th>Species</th>
                 <th>Age</th>
             </tr>
+            </thead>
+            <tbody>
             {% for an in agesortinfo_list %}
                 <tr>
                     <td>{{ an.animal_name }}</td>
@@ -200,18 +228,22 @@
                     <td>{{ an.age }}</td>
                 </tr>
             {% endfor %}
+            </tbody>
         </table>
     {% endif %}
     <!--Query8 -->
     {% if catdog_list %}
         <h2>All Cats and Dogs</h2>
-        <table>
+        <table class="table">
+            <thead>
             <tr>
                 <th>Animal Name</th>
                 <th>Breed</th>
                 <th>Species</th>
                 <th>Age</th>
             </tr>
+            </thead>
+            <tbody>
             {% for an in catdog_list %}
                 <tr>
                     <td>{{ an.animal_name }}</td>
@@ -220,18 +252,22 @@
                     <td>{{ an.age }}</td>
                 </tr>
             {% endfor %}
+            </tbody>
         </table>
     {% endif %}
     <!--Query9 -->
     {% if count_list %}
         <h2>Number of Animals</h2>
-        <table>
+        <table class="table">
+            <thead>
             <tr>
                 <th>Animal Name</th>
                 <th>Breed</th>
                 <th>Species</th>
                 <th>Age</th>
             </tr>
+            </thead>
+            <tbody>
             {% for an in count_list %}
                 <tr>
                     <td>{{ an.animal_name }}</td>
@@ -240,6 +276,7 @@
                     <td>{{ an.age }}</td>
                 </tr>
             {% endfor %}
+            </tbody>
         </table>
     {% endif %}
 
