@@ -158,15 +158,6 @@ class AgeList(ListView):
         return AnimalInfo.objects.order_by('-birth_date')
 
 
-def owner_list(request):
-    owner_table = OwnersTable(
-        Owners.objects.raw('SELECT "PetDispense_animalinfo".animal_id, animal_name, owner_firstname ' +
-                           'FROM "PetDispense_animalinfo" ' +
-                           'NATURAL JOIN "PetDispense_owners"'))
-    RequestConfig(request).configure(owner_table)
-    return render(request, 'PetDispense/animalinfo_list.html', {'ownerTable': owner_table})
-
-
 class OwnerList(ListView):
     template_name = 'PetDispense/animalinfo_list.html'
     context_object_name = 'owner_list'
