@@ -61,6 +61,7 @@
         <table class="table">
             <thead>
             <tr>
+                <th>Owner Firstname</th>
                 <th>Animal Name</th>
                 <th>Breed</th>
                 <th>Species</th>
@@ -71,13 +72,15 @@
             {% for an in owner_list %}
 
                 <tr>
+                    <td>{{ an.owner_firstname }}</td>
                     <td>{{ an.animal_name }}</td>
                     <td>{{ an.breed_name }}</td>
                     <td>{{ an.species_name }}</td>
                     <td>{{ an.age }}</td>
-                    <td>{{ an.owner_firstname }}</td>
+
                 </tr>
             {% endfor %}
+        </tbody>
         </table>
     {% endif %}
     <!--Query2 -->
