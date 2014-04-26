@@ -68,7 +68,13 @@
                         <br>
                         <input class="btn btn-primary" type="submit" value="Search"/>
                     </form>
-                    .
+                    <form method="get" action="{% url 'search' %}">
+                        <input type="text" name="q1" id="id_q1" value="{{ query }}"/>
+                        <br>
+                        <br>
+                        <input class="btn btn-primary" type="submit" value="Search"/>
+                    </form>
+
                 </div>
             </div>
         </div>
