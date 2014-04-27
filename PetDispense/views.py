@@ -88,7 +88,7 @@ def login_failure(request):
     return render_to_response('PetDispense/index_fail.html')
 
 
-def logout(request):
+def logout_user(request):
     # logout the user
     logout(request)
     # go back to the login page
