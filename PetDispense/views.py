@@ -161,7 +161,7 @@ class AnimalList(ListView):
         return AnimalInfo.objects.raw(
             'SELECT "PetDispense_animalinfo".animal_id, animal_name ' +
             'FROM "PetDispense_animalinfo" ' +
-            'WHERE in_shelter = true')
+            'WHERE in_shelter = false')
 
 
 class AgeList(ListView):
