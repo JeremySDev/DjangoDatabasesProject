@@ -47,6 +47,13 @@
                     <br>
                     <input class="btn btn-primary" type="submit" name="search" value="Search"/>
                 </form>
+            </div>
+        </div>
+   
+        <div class="form-group">
+            <div class="controls">
+                <label class="control-label">Search by Animal Name</label>
+
                 <form method="get" action="{% url 'search_owners' %}">
                     <label for="id_qt"></label>
                     <input type="text" name="qt" id="id_qt" value="{{ query }}"/>
