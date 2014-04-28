@@ -46,8 +46,7 @@ def search_owners(request):
         query2 = None
         results_owner = None
     if query2:
-        if query1:
-            results_owner = Owners.objects.filter(owner_lastname=query2)
+        results_owner = Owners.objects.filter(owner_lastname=query2)
     context = RequestContext(request)
     return render_to_response('PetDispense/results2.html', {"results_owners": results_owner}, context_instance=context)
 
@@ -97,6 +96,7 @@ def logout_user(request):
     logout(request)
     # go back to the login page
     return render(request, 'PetDispense/index.html')
+
 
 ###############Webpages#################################################################################################
 
