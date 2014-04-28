@@ -57,8 +57,8 @@
                 <label class="control-label">Search Owners by that Name</label>
 
                 <div class="controls">
-                    <form method="get" action="{% url 'search_owners' %}">
-                        <input type="text" name="q" id="id_q" value="{{ query }}"/>
+                    <form method="get" action="{% url 'search' %}">
+                        <input type="text" name="qt" id="id_q" value="{{ query }}"/>
                         <br>
                         <br>
                         <input class="btn btn-primary" type="submit" value="Search"/>
