@@ -159,7 +159,7 @@ class AnimalList(ListView):
     #return AnimalInfo.objects.filter(in_shelter='false')
     def get_queryset(self):
         return AnimalInfo.objects.raw(
-            'SELECT "PetDispense_animalinfo".animal_id, animal_name' +
+            'SELECT "PetDispense_animalinfo".animal_id, animal_name ' +
             'FROM "PetDispense_animalinfo" ' +
             'WHERE in_shelter = true')
 
