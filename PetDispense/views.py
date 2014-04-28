@@ -156,8 +156,12 @@ class AnimalList(ListView):
     template_name = 'PetDispense/animalinfo_list.html'
     context_object_name = 'not_in_shelter_list'
 
+    #return AnimalInfo.objects.filter(in_shelter='false')
     def get_queryset(self):
-        return AnimalInfo.objects.filter(in_shelter='false')
+        return AnimalInfo.objects.raw(
+            'SELECT "PetDispense_animalinfo".animal_id, animal_name, species_name, breed_name ' +
+            'FROM "PetDispense_animalinfo" ' +
+            'WHERE in_shelter = true')
 
 
 class AgeList(ListView):
