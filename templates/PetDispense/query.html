@@ -42,10 +42,17 @@
 
                 <form method="get" action="{% url 'search' %}">
                     <label for="id_q"></label>
+                    <input type="text" name="q" id="id_q" value="{{ query }}"/>
+                    <br>
+                    <br>
+                    <input class="btn btn-primary" type="submit" name="search" value="Search"/>
+                </form>
+                <form method="get" action="{% url 'search_owners' %}">
+                    <label for="id_qt"></label>
                     <input type="text" name="qt" id="id_qt" value="{{ query }}"/>
                     <br>
                     <br>
-                    <input class="btn btn-primary" type="submit" value="Search"/>
+                    <input class="btn btn-primary" type="submit" name="search_owners" value="Search"/>
                 </form>
             </div>
         </div>
