@@ -54,7 +54,7 @@
                         {% else %}
                             <td>No</td>
                         {% endif %}
-                        <td><a href="{% url 'dispense' %}?subjectID={{ an }}">Dispense</a></td>
+                        <td><a href="{% url 'dispense' %}?subjectID={{ results }}">Dispense</a></td>
                     </tr>
                 {% endfor %}
                 </tbody>
