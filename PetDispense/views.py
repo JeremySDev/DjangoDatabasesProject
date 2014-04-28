@@ -157,7 +157,7 @@ class AnimalList(ListView):
     context_object_name = 'not_in_shelter_list'
 
     def get_queryset(self):
-        return AnimalInfo.objects.filter(in_shelter__exact='false')
+        return AnimalInfo.objects.filter(in_shelter='false')
 
 
 class AgeList(ListView):
