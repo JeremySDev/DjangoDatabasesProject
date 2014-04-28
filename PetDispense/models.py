@@ -51,7 +51,7 @@ class Owners(models.Model):
     owner_id = models.IntegerField(primary_key=True)
     owner_lastname = models.CharField(max_length=100, blank=False, null=False)
     owner_firstname = models.CharField(max_length=100, blank=False, null=False)
-    owner_phone = models.IntegerField(max_length=10, blank=False, null=False)
+    owner_phone = models.CharField(max_length=100, blank=False, null=False)
     owner_address = models.CharField(max_length=100, blank=False, null=False)
     animal = models.ForeignKey(AnimalInfo)
 
