@@ -49,8 +49,12 @@
                         <td>{{ an.species_name }}</td>
                         <td>{{ an.age }}</td>
                         <td>{{ an.birth_date }}</td>
-                        <td>{{ an.in_shelter }}</td>
-                        <td><a> </a></td>
+                        {% if an.in_shelter %}
+                            <td>Yes</td>
+                        {% else %}
+                            <td>No</td>
+                        {% endif %}
+                        <td><a href="{% url 'dispense' %}?subjectID={{ an }}">Dispense</a></td>
                     </tr>
                 {% endfor %}
                 </tbody>

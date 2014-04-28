@@ -23,7 +23,7 @@
                 </button>
                 <a href="{% url 'home' %}" class="navbar-brand">Pet Dispense</a>
             </div>
-            <div class="collapse navbar-collapse  pull-right">
+            <div class="collapse navbar-collapse pull-right">
                 <ul class="nav navbar-nav">
                     <li><a href="{% url 'home' %}">Home</a></li>
                     <li><a href="{% url 'about' %}">About</a></li>
@@ -41,6 +41,7 @@
                 <label class="control-label">Search by Animal Name</label>
 
                 <form method="get" action="{% url 'search' %}">
+                    <label for="id_q"></label>
                     <input type="text" name="q" id="id_q" value="{{ query }}"/>
                     <br>
                     <br>

@@ -52,6 +52,11 @@ def search_owners(request):
     return render_to_response('PetDispense/results2.html', {"results_owners": results_owner}, context_instance=context)
 
 
+def dispense(request):
+    an = request.GET.get('an')
+    return render_to_response("PetDispense/petinfopage.html", {"an": an})
+
+
 ############Login#######################################################################################################
 def index(request):
     c = {}
