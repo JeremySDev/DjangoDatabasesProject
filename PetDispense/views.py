@@ -38,7 +38,7 @@ def search(request):
 
 
 def search_owners(request):
-    results_owner = None
+    global results_owner
     query1 = request.GET.get('qt')
     try:
         query2 = str(query1)
@@ -48,7 +48,7 @@ def search_owners(request):
     if query2:
         results_owner = Owners.objects.filter(owner_lastname=query2)
     context = RequestContext(request)
-    return render_to_response('PetDispense/results2.html', {"results_owners": results_owner}, context_instance=context)
+    return render_to_response('PetDispense/results2.html', {"results_owner": results_owner}, context_instance=context)
 
 
 def dispense(request):
