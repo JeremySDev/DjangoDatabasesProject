@@ -16,6 +16,13 @@ from PetDispense.tables import OwnersTable
 from PetDispense.forms import UserForm
 
 
+############Search######################################################################################################
+def query(request):
+    c = {}
+    c.update(csrf(request))
+    return render_to_response("PetDispense/query.html", c)
+
+
 def search(request):
     global results
     query1 = request.GET.get('q')
@@ -45,15 +52,7 @@ def search_owners(request):
     return render_to_response('PetDispense/results2.html', {"results_owners": results_owner}, context_instance=context)
 
 
-def query(request):
-    c = {}
-    c.update(csrf(request))
-    return render_to_response("PetDispense/query.html", c)
-
-
 ############Login#######################################################################################################
-
-
 def index(request):
     c = {}
     c.update(csrf(request))
