@@ -49,7 +49,7 @@
                         <td>{{ an.species_name }}</td>
                         <td>{{ an.age }}</td>
                         <td>{{ an.birth_date }}</td>
-                        <td>{{ an.in_shelter }}</td>
+                        {% comment %}<td>{{ an.in_shelter }}</td>{% endcomment %}
                         {% if an.in_shelter %}
                             <td>Yes</td>
                         {% else %}
