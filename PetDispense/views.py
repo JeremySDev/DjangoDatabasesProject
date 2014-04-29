@@ -119,10 +119,6 @@ def agreement(request):
     return render_to_response("PetDispense/agreement.html", c)
 
 
-def confirm(request):
-    return render_to_response('PetDispense/confirm.html')
-
-
 def returns(request):
     return render_to_response('PetDispense/returns.html')
 

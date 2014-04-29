@@ -23,7 +23,6 @@ Templates folder
 - PetDispense - contains html files for the PetDispense app.
     - about.html     - give a brief over view of the project
     - agreement.html - ask if the user if they agree with the
-    - confirm.html   -
     - contact.html   - a contact page to get in touch with app devs
     - index.html     - login screen and entry point in to the program
     - pin.html       - 
