@@ -127,27 +127,6 @@ def confirm(request):
     return render_to_response('PetDispense/agreement.html')
 
 
-def pin(request):
-    return render_to_response('PetDispense/pin.html')
-
-
-def animal(request):
-    table = AnimalInfoTable(AnimalInfo.objects.all())
-    RequestConfig(request).configure(table)
-    return render(request, 'PetDispense/animals.html', {'table': table})
-
-
-def breeds(request):
-    table = BreedsTable(Breeds.objects.all())
-    RequestConfig(request).configure(table)
-    return render(request, 'PetDispense/breeds.html', {'table': table})
-
-
-def species(request):
-    table = SpeciesTable(Species.objects.all())
-    RequestConfig(request).configure(table)
-    return render(request, 'PetDispense/species.html', {'table': table})
-
 
 ###############List Views###############################################################################################
 
