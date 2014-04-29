@@ -123,6 +123,10 @@ def returns(request):
     return render_to_response('PetDispense/returns.html')
 
 
+def confirm(request):
+    return render_to_response('PetDispense/agreement.html')
+
+
 def pin(request):
     return render_to_response('PetDispense/pin.html')
 
