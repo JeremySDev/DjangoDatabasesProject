@@ -236,7 +236,7 @@ class CatDogList(ListView):
         return AnimalInfo.objects.raw('SELECT animal_id, animal_name, species_name ' +
                                       'FROM "PetDispense_animalinfo" ' +
                                       'NATURAL JOIN "PetDispense_species" ' +
-                                      'WHERE species_name = %s ', [dog], 
+                                      'WHERE species_name = %s ', [dog],
                                       'UNION ' +
                                       'SELECT animal_id, animal_name, species_name ' +
                                       'FROM "PetDispense_animalinfo" ' +
