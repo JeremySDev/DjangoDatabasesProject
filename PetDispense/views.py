@@ -127,10 +127,7 @@ def confirm(request):
     return render_to_response('PetDispense/agreement.html')
 
 
-
 ###############List Views###############################################################################################
-
-
 class AnimalList(ListView):
     template_name = 'PetDispense/animalinfo_list.html'
     context_object_name = 'not_in_shelter_list'
@@ -244,10 +241,7 @@ class CatDogList(ListView):
                                       'SELECT animal_id, animal_name, species_name ' +
                                       'FROM "PetDispense_animalinfo" ' +
                                       'NATURAL JOIN "PetDispense_species" ' +
-                                      'WHERE species_name = %s', [cat], [dog])
-
-
-#need new query can't really use this one because doesn't return rows
+                                      'WHERE species_name = %s', [cat])
 
 
 class CountInShelterList(ListView):
