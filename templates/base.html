@@ -1,48 +1,9 @@
 {% load staticfiles %}
 <html>
 <head>
-    <link rel="stylesheet" href="{% block stylesheet_rtl1 %}/static/css/bootstrap.css{% endblock %}"/>
-    <link rel="stylesheet" href="{% block stylesheet_rtl2 %}/static/css/bootstrap-responsive.css{% endblock %}"/>
     <link rel="shortcut icon" href="/static/img/favicon_art.png"/>
     <link rel="shortcut icon" type="image/png" href="https://agora.cs.wcu.edu/~jstilwell/public_html/favicon_art.png">
 </head>
-
 <body>
-{% block content %}
-    <div class="navbar navbar-fixed-top  navbar-inverse">
-        <div class="container">
-            <div class="navbar-inner">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
-                        class="icon-bar"></span><span class="icon-bar"></span>
-                </button>
-                <a href="{% url 'home' %}" class="navbar-brand">Pet Dispense</a>
-            </div>
-            <div class="collapse navbar-collapse  pull-right">
-                <ul class="nav navbar-nav">
-                    <li><a href="{% url 'home' %}">Home</a></li>
-                    <li><a href="{% url 'about' %}">About</a></li>
-                    <li><a href="{% url 'contact' %}">Contact</a></li>
-                    <li><a href="{% url 'logout' %}">Logout</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <br><br><br>
-{% endblock %}
-{% block javascript %}
-    <script type="text/javascript" src="/static/js/bootstrap.js"></script>
-    <script type="text/javascript" src="/static/js/transition.js"></script>
-    <script type="text/javascript" src="/static/js/alert.js"></script>
-    <script type="text/javascript" src="/static/js/modal.js"></script>
-    <script type="text/javascript" src="/static/js/dropdown.js"></script>
-    <script type="text/javascript" src="/static/js/scrollspy.js"></script>
-    <script type="text/javascript" src="/static/js/tab.js"></script>
-    <script type="text/javascript" src="/static/js/tooltip.js"></script>
-    <script type="text/javascript" src="/static/js/popover.js"></script>
-    <script type="text/javascript" src="/static/js/button.js"></script>
-    <script type="text/javascript" src="/static/js/collapse.js"></script>
-    <script type="text/javascript" src="/static/js/carousel.js"></script>
-{% endblock %}
 </body>
 </html>
